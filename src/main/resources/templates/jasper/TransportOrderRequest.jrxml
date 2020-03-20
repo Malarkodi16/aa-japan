@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_Landscape" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7b153ae9-22cc-45a4-b281-f17711ab2b06">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="itemDataset" uuid="e11dab06-ef02-4610-8cd7-62cc51d5ced0">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="chassisNo" class="java.lang.String"/>
+		<field name="lotNo" class="java.lang.String"/>
+		<field name="posNo" class="java.lang.String"/>
+		<field name="pickupLocationName" class="java.lang.String"/>
+		<field name="numberPlate" class="java.lang.String"/>
+		<field name="remarks" class="java.lang.String"/>
+		<field name="pickupLocationCustom" class="java.lang.String"/>
+		<field name="dropLocationName" class="java.lang.String"/>
+		<field name="dropLocationCustom" class="java.lang.String"/>
+		<field name="destinationCountry" class="java.lang.String"/>
+		<field name="model" class="java.lang.String"/>
+		<field name="pickupLocation" class="java.lang.String"/>
+		<field name="dropLocation" class="java.lang.String"/>
+		<field name="company" class="java.lang.String"/>
+		<field name="auctionHouse" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="locationDataset" uuid="918fc1e5-100b-499b-ada8-3cb857adc26f">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="tantousha" class="java.lang.String"/>
+		<field name="displayName" class="java.lang.String"/>
+		<field name="address" class="java.lang.String"/>
+		<field name="phone" class="java.lang.String"/>
+		<field name="fax" class="java.lang.String"/>
+		<field name="personInCharge" class="java.lang.String"/>
+		<field name="atsukai" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="itemDatasource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="locationList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="orderDetails" class="com.nexware.aajapan.dto.TTransportOrderInvoiceDto"/>
+	<parameter name="logo" class="java.awt.image.BufferedImage"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="128">
+			<frame>
+				<reportElement x="10" y="73" width="170" height="55" uuid="0fe2ddad-d6ac-47c3-abcc-44728926b49c"/>
+				<textField>
+					<reportElement x="30" y="9" width="100" height="14" uuid="986b1006-40d9-4293-85a8-13bd26b628e8"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="9" isBold="false"/>
+						<paragraph firstLineIndent="4" spacingBefore="0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{orderDetails}.getTransporterName() + " 御中"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="30" y="24" width="46" height="21" uuid="c648ad09-a637-4a09-9314-925a80db4b70"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="9" isBold="true"/>
+						<paragraph firstLineIndent="3" spacingBefore="0"/>
+					</textElement>
+					<text><![CDATA[開催日	]]></text>
+				</staticText>
+				<textField>
+					<reportElement stretchType="RelativeToBandHeight" x="76" y="24" width="80" height="21" uuid="96a37c3e-e327-4a4d-8e6c-4a541566738f"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new SimpleDateFormat("d/MM/yyyy").format($P{orderDetails}.getAuctionDate())]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="180" y="5" width="570" height="115" uuid="e28a6f33-931a-401f-b517-ebec345f09fa"/>
+				<rectangle>
+					<reportElement x="19" y="0" width="400" height="110" uuid="8889197e-4bef-4835-935c-c8fa52e76c92"/>
+				</rectangle>
+				<line>
+					<reportElement x="79" y="0" width="1" height="110" uuid="210dbd12-a65e-465a-9958-103a75417b4f"/>
+				</line>
+				<line>
+					<reportElement x="19" y="20" width="400" height="1" uuid="71ec2e08-b781-40a1-8d26-ae9d0a5d34d7"/>
+				</line>
+				<line>
+					<reportElement x="19" y="40" width="400" height="1" uuid="f36f7613-2b19-4d3b-97c3-18267e19c8d0"/>
+				</line>
+				<line>
+					<reportElement x="19" y="67" width="400" height="1" uuid="0cdc8866-5792-4b95-ba8e-0d313a5cc6da"/>
+				</line>
+				<line>
+					<reportElement x="19" y="90" width="400" height="1" uuid="0f66a142-8a86-468a-b343-cf9b7f0aee4e"/>
+				</line>
+				<staticText>
+					<reportElement x="19" y="20" width="60" height="20" uuid="e3cb05a7-f554-4916-bc11-a79660a0c72a"/>
+					<textElement textAlignment="Center">
+						<font fontName="MSMINCHO" size="8" isBold="true"/>
+						<paragraph spacingBefore="4"/>
+					</textElement>
+					<text><![CDATA[Telephone]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="19" y="43" width="60" height="20" uuid="d61fdbd0-b18a-4e84-8050-38080d12e0b1"/>
+					<textElement textAlignment="Center">
+						<font fontName="MSMINCHO" size="8" isBold="true"/>
+						<paragraph spacingBefore="4"/>
+					</textElement>
+					<text><![CDATA[Mobile]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="19" y="69" width="60" height="20" uuid="f0a8c63c-a36e-4728-bd0b-f67490cdaa7d"/>
+					<textElement textAlignment="Center">
+						<font fontName="MSMINCHO" size="8" isBold="true"/>
+						<paragraph spacingBefore="4"/>
+					</textElement>
+					<text><![CDATA[Fax]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="19" y="90" width="60" height="20" uuid="84a488fe-ef0f-4c55-93f1-2b014c16396e"/>
+					<textElement textAlignment="Center">
+						<font fontName="MSMINCHO" size="8" isBold="true"/>
+						<paragraph firstLineIndent="0" spacingBefore="4"/>
+					</textElement>
+					<text><![CDATA[Address]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="19" y="0" width="60" height="20" uuid="ba17022c-0e18-4864-9384-c8f1e1713e83"/>
+					<textElement textAlignment="Center">
+						<font fontName="MSMINCHO" size="6" isBold="false"/>
+						<paragraph spacingBefore="4"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="80" y="0" width="339" height="20" uuid="29a29b40-5afc-48d6-a775-be27e95023cf"/>
+					<textElement textAlignment="Center">
+						<font fontName="MSMINCHO" size="8" isBold="false"/>
+						<paragraph spacingBefore="4"/>
+					</textElement>
+					<text><![CDATA[エーエージャパン]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="80" y="24" width="339" height="14" uuid="86a9590a-045d-417c-8668-30d6139da8a2"/>
+					<textElement textAlignment="Center">
+						<font fontName="MSMINCHO" size="8" isBold="false"/>
+						<paragraph spacingBefore="4"/>
+					</textElement>
+					<text><![CDATA[+(81) 45-594-0507]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="43" width="340" height="24" uuid="129cc49b-8175-40ba-961d-87d2dd1c9226"/>
+					<textElement textAlignment="Center">
+						<font fontName="MSMINCHO" size="8" isBold="false"/>
+						<paragraph spacingBefore="4"/>
+					</textElement>
+					<text><![CDATA[土曜日、祝日の緊急の連絡は下記のリズワンの携帯までご連絡願いします
+090　6016　9434]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="69" width="340" height="20" uuid="2ad16947-e54d-4ba0-a68b-33ec6851245d"/>
+					<textElement textAlignment="Center">
+						<font fontName="MSMINCHO" size="8" isBold="false"/>
+						<paragraph spacingBefore="4"/>
+					</textElement>
+					<text><![CDATA[(81) 45-594-0508	]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="90" width="340" height="18" uuid="63a833e4-9d86-4af5-a6b7-08e4c0f66289"/>
+					<textElement textAlignment="Center">
+						<font fontName="MSMINCHO" size="8" isBold="false"/>
+						<paragraph spacingBefore="4"/>
+					</textElement>
+					<text><![CDATA[224-0025 横浜市都筑区早淵1-28-21 2F]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="430" y="0" width="20" height="14" uuid="6208cffa-5533-4467-9758-cde5270d4e9a"/>
+					<textElement>
+						<font fontName="MSMINCHO" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[No :	]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="430" y="14" width="20" height="12" uuid="c0b7a370-e336-486c-b4df-b9e7baf47f11"/>
+					<textElement>
+						<font fontName="MSMINCHO" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Dt.:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="450" y="0" width="110" height="14" uuid="34a1f0bc-e587-49d2-9ebb-3c2fe3c39475"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{orderDetails}.getInvoiceNo()]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="450" y="14" width="110" height="12" uuid="4714e440-59b6-4fa3-b952-2d44b4c4a1ef"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new SimpleDateFormat("d/MM/yyyy").format(new Date())]]></textFieldExpression>
+				</textField>
+			</frame>
+			<image hAlign="Center">
+				<reportElement x="10" y="2" width="170" height="58" uuid="deb5dc15-4dee-4563-a296-0e5a9cfc154f"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="180" splitType="Stretch">
+			<staticText>
+				<reportElement x="90" y="0" width="270" height="20" uuid="172a5488-cab0-4fe7-9b89-723d3b910ae0"/>
+				<textElement textAlignment="Center">
+					<font fontName="MSMINCHO" size="8" isBold="true"/>
+					<paragraph spacingBefore="6"/>
+				</textElement>
+				<text><![CDATA[*注意陸送費用と搬入可能日を明記してご返信ください]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="30" y="30" width="189" height="41" uuid="8b2f1c7d-69fe-45e5-8183-507a240028af"/>
+			</rectangle>
+			<line>
+				<reportElement x="30" y="50" width="189" height="1" uuid="ca857269-d4f0-4bb6-9208-144f30b98cd8"/>
+			</line>
+			<line>
+				<reportElement x="90" y="30" width="1" height="41" uuid="0fbffb9b-5995-440e-8ea3-346eb0b43912"/>
+			</line>
+			<staticText>
+				<reportElement x="30" y="30" width="60" height="20" uuid="0461d2a2-8c0c-453d-a672-a70ae8f893f8"/>
+				<textElement textAlignment="Center">
+					<font fontName="MSMINCHO" size="10" isBold="true"/>
+					<paragraph spacingBefore="6"/>
+				</textElement>
+				<text><![CDATA[引取日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="51" width="60" height="20" uuid="d193f5b8-0c42-4c15-9a44-ce410fca4d3d"/>
+				<textElement textAlignment="Center">
+					<font fontName="MSMINCHO" size="10" isBold="true"/>
+					<paragraph spacingBefore="6"/>
+				</textElement>
+				<text><![CDATA[入金予定日]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="230" y="35" width="318" height="30" uuid="e08da048-5893-4598-a12a-c77cc3788eed"/>
+			</rectangle>
+			<line>
+				<reportElement x="320" y="35" width="1" height="29" uuid="2bf649a4-08ee-40fc-95e4-13e36b13c465"/>
+			</line>
+			<staticText>
+				<reportElement x="230" y="36" width="90" height="28" uuid="a9ab9d6b-4d9f-447c-bf4d-706b25e24877"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="14" isBold="true"/>
+					<paragraph spacingBefore="0"/>
+				</textElement>
+				<text><![CDATA[納車日]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement mode="Transparent" x="0" y="90" width="802" height="90" uuid="c41ce686-0176-4b20-a00b-11923f657563">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.studio.components.autoresize.proportional" value="true"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="itemDataset" uuid="ee145632-6715-4da5-8cec-51aa456a5806">
+						<dataSourceExpression><![CDATA[$P{itemDatasource}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="63" uuid="092cb579-03f5-49d6-8151-2405a8a23faa">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="63" height="30" uuid="f2ecd8b5-ed55-4b8d-8694-bd7206d0f8ee"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+									<paragraph firstLineIndent="8" rightIndent="0" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[SNo]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="63" height="30" uuid="3c7c8711-f4d4-4611-a351-57689b5de170"/>
+								<textElement>
+									<font fontName="MSMINCHO"/>
+									<paragraph lineSpacing="Single" firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="87" uuid="65b336f3-e860-4f7e-91b7-2522b69ad623">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="87" height="30" uuid="fd6e42f3-e059-4358-b056-b31055e710d2"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+									<paragraph firstLineIndent="8" rightIndent="0" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[ChassisNo]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="87" height="30" uuid="6587d69b-0cd0-4a8b-81b7-1d8cba6d6078"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+									<paragraph firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[車体番号]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="87" height="30" uuid="9477327b-59e0-4e0b-a28c-cebc2b4a7beb"/>
+								<textElement>
+									<font fontName="MSMINCHO"/>
+									<paragraph lineSpacing="Proportional" firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{chassisNo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="79" uuid="a731ebd0-86fd-484f-ab15-637de36abe17">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="79" height="30" uuid="ead9859b-44c9-4943-8641-ff938ba46755"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+									<paragraph firstLineIndent="8" rightIndent="0" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[Name]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement stretchType="ElementGroupHeight" x="0" y="0" width="79" height="30" uuid="f3c28b88-d6b5-4ddb-978d-5b634ba6d76c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+									<paragraph firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[車種]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="79" height="30" uuid="f7bd8423-d16c-43c4-9f00-5bbdd4fc301a"/>
+								<textElement>
+									<font fontName="MSMINCHO"/>
+									<paragraph lineSpacing="Proportional" firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{model}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="77" uuid="c09bd9b3-0e36-474f-9f00-451268cbc617">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="77" height="30" uuid="d3b37a77-c090-4e78-9339-bd5734ff004e"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+									<paragraph firstLineIndent="8" rightIndent="0" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[Shuppin No]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="77" height="30" uuid="a03b7df3-0f57-4eaa-b2ce-7355f3f6a45d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+									<paragraph firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[出品番号]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="77" height="30" uuid="2dee3fe9-9d5f-4d4a-be09-10bcd8a9f7da"/>
+								<textElement>
+									<font fontName="MSMINCHO"/>
+									<paragraph lineSpacing="Proportional" firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{lotNo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="67" uuid="9656f79f-e182-43e5-ae21-b3442fee8e55">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="67" height="30" uuid="ff531c91-db09-4c54-ab4a-219da0c965c3"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+									<paragraph firstLineIndent="8" rightIndent="0" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[Pur From / Pos No]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="67" height="30" uuid="5a39eab9-041f-4cf9-ad27-31487a1c732f"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+									<paragraph firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[POSﾅﾝﾊﾞｰ]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="67" height="30" uuid="e4062af3-50e8-4026-914b-73fe63889969"/>
+								<textElement>
+									<font fontName="MSMINCHO"/>
+									<paragraph lineSpacing="Proportional" firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{auctionHouse} != null ? $F{company} +"["+ $F{auctionHouse} +"]" +" / " + $F{posNo} : $F{company}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="103" uuid="d04b19c3-9c1d-46c6-902e-2b9b736bab7f">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="103" height="30" uuid="451d1729-2224-49c9-ae5f-8a325339f903"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+									<paragraph firstLineIndent="8" rightIndent="0" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[Location]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="103" height="30" uuid="c5437107-0dd9-4130-ad4a-6bfb9170cdd8"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+									<paragraph firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[引取先名]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<box>
+								<pen lineWidth="2.0"/>
+							</box>
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="103" height="30" uuid="31a76b3d-ea63-4b58-8842-f93dbe33eee5"/>
+								<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+									<pen lineWidth="1.0" lineStyle="Double" lineColor="#050505"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement>
+									<font fontName="MSMINCHO" size="11" isBold="true"/>
+									<paragraph lineSpacing="Proportional" firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{pickupLocation}.equalsIgnoreCase( "others" )?$F{pickupLocationCustom}: $F{pickupLocationName}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="105" uuid="2c0fca0a-f23b-4149-af55-dac62f581cbf">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="105" height="30" uuid="20547647-6e1d-496f-be1b-f26002c3ccbd"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+									<paragraph firstLineIndent="8" rightIndent="0" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[TransportTo]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="105" height="30" uuid="932ff217-f787-4683-a1f3-748de8e04ceb"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+									<paragraph firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[納車先名]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<box>
+								<pen lineWidth="2.0"/>
+							</box>
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="105" height="30" uuid="a49547fd-5e63-47f7-b645-9cc3a64fb867"/>
+								<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+									<pen lineWidth="2.0" lineStyle="Solid" lineColor="#FF1803"/>
+									<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+									<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+								</box>
+								<textElement>
+									<font fontName="MSMINCHO" size="11" isBold="true"/>
+									<paragraph lineSpacing="Proportional" firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{dropLocation}.equalsIgnoreCase( "others" )?$F{dropLocationCustom}: $F{dropLocationName}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="75" uuid="9a5cef64-33f2-40a2-b109-ba3c7b79a730">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column8"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="75" height="30" uuid="497c9fa5-4ac9-4709-8bda-38faaac568a5"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+									<paragraph firstLineIndent="8" rightIndent="0" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[Final]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="75" height="30" uuid="7899397d-0a1d-473b-ae93-86e8f5f97f0d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+									<paragraph firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[向地]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="75" height="30" uuid="64250e45-2690-4440-97df-46743d5d9f88"/>
+								<textElement>
+									<font fontName="MSMINCHO"/>
+									<paragraph lineSpacing="Proportional" firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{destinationCountry}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="74" uuid="68613e70-af6d-4f88-9bb1-1bae43f2a389">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column9"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="74" height="30" uuid="74eb81a1-bd47-4d87-828c-0b0804ed4d69"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+									<paragraph firstLineIndent="8" rightIndent="0" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[Plate No]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="74" height="30" uuid="a4a6efeb-4afa-4f1d-bfe4-7d6a5481091c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+									<paragraph firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[ナンバープレート]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="74" height="30" uuid="e06c444d-0c9e-474a-b964-7257a1ff0133"/>
+								<textElement>
+									<font fontName="MSMINCHO"/>
+									<paragraph lineSpacing="Proportional" firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{numberPlate}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="72" uuid="94ef478d-26b5-4848-b757-d2f745f28842">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column10"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="72" height="30" uuid="ed865555-0300-4156-9e66-83ddf5a63cdf"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+									<paragraph firstLineIndent="8" rightIndent="0" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[Remarks]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="72" height="30" uuid="0712c122-0d4c-4890-99d8-f18748f70152"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+									<paragraph firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<text><![CDATA[備考]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField textAdjust="StretchHeight">
+								<reportElement x="0" y="0" width="72" height="30" uuid="f502f104-1ea8-4bb1-97b9-5f6efd3856bd"/>
+								<textElement>
+									<font fontName="MSMINCHO"/>
+									<paragraph lineSpacing="Proportional" firstLineIndent="8" spacingBefore="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{remarks}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField isBlankWhenNull="true">
+				<reportElement x="320" y="36" width="228" height="29" uuid="50e9ba6a-f8d9-4c25-87c1-8aea5b80c4b3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{orderDetails}.getDeliveryDateNote()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="90" y="30" width="90" height="19" uuid="6a913510-7a2c-4a7e-a083-aece79f2faba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{orderDetails}.getSpickupDate()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="50" width="90" height="21" uuid="7d241652-aca2-4142-ab28-958f28d850eb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{orderDetails}.getsDueDate()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="180" y="31" width="39" height="19" uuid="1e2e8aeb-62a6-499d-8bd7-f5eddb5bf4d7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{orderDetails}.getPickupTime()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="180" y="51" width="39" height="20" uuid="f83d0a6e-0271-4577-8dbe-5ad3cc6b33dd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{orderDetails}.getDeliveryTime()]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="228">
+			<componentElement>
+				<reportElement x="0" y="10" width="380" height="80" uuid="86be6a62-d518-4183-9c04-2a3b06176a4e"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="locationDataset" uuid="608c83fc-ac46-4ce0-b68a-8471edfba462">
+						<dataSourceExpression><![CDATA[$P{locationList}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="80" width="380">
+						<textField>
+							<reportElement x="0" y="3" width="380" height="11" uuid="6280ffff-682e-4832-b6dc-f5cded697e7f"/>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font fontName="MSMINCHO" size="11"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{displayName}==null?"":$F{displayName}]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight">
+							<reportElement x="0" y="16" width="380" height="14" uuid="a85005bf-e053-478a-9ae2-9e5a5f8b23ea"/>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font fontName="MSMINCHO" size="11"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{address}==null?"":$F{address}]]></textFieldExpression>
+						</textField>
+						<staticText>
+							<reportElement x="0" y="54" width="60" height="12" isPrintWhenDetailOverflows="true" uuid="a3a7d6cd-4069-4363-9d23-d118ab5b333d"/>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font fontName="MSMINCHO" size="11"/>
+							</textElement>
+							<text><![CDATA[Phone:]]></text>
+						</staticText>
+						<textField textAdjust="StretchHeight">
+							<reportElement stretchType="ElementGroupHeight" x="60" y="54" width="320" height="12" uuid="3da3a6dd-04be-405f-b4cc-f16d4aeae262"/>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font fontName="MSMINCHO" size="11"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{phone}==null?"":$F{phone}]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+							<reportElement x="0" y="40" width="380" height="14" uuid="b5f9d4c2-c896-4dd7-9787-e2e78fea05e6"/>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font fontName="MSMINCHO" size="11"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{atsukai}]]></textFieldExpression>
+						</textField>
+						<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+							<reportElement x="0" y="66" width="380" height="14" uuid="7f64917a-a88b-4ec2-bd22-41b604d24182"/>
+							<textElement textAlignment="Left" verticalAlignment="Middle">
+								<font fontName="MSMINCHO" size="11"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{tantousha}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<frame>
+				<reportElement x="419" y="10" width="383" height="72" uuid="5fc44fe2-3af8-4cb4-8404-1a53a48584b4"/>
+				<textField isBlankWhenNull="true">
+					<reportElement x="70" y="0" width="313" height="80" uuid="5efb995f-f9f7-4038-beba-a1aae2ea9a57"/>
+					<textElement>
+						<font fontName="MSMINCHO" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{orderDetails}.getCommentAppended()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="70" height="19" uuid="a76ebb01-2d18-462e-b027-e210503fe76d"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="11"/>
+					</textElement>
+					<text><![CDATA[COMMENTS : ]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

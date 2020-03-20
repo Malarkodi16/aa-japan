@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- Base Definition -->
+	<definition name="accounts.invoiceBooking.base-definition"
+		template="/WEB-INF/views/accounts/layout/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/layout/acc_header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/accounts/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/layout/footer.jsp" />
+		<put-list-attribute name="stylesheets">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/css/dataTables.bootstrap.min.css" />
+		</put-list-attribute>
+
+		<put-list-attribute name="javascripts">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/js/jquery.dataTables.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/js/dataTables.bootstrap.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+		</put-list-attribute>
+
+
+	</definition>
+	<!-- Accounts Purchased Page -->
+	<definition name="accounts.invoiceBooking.auction"
+		extends="accounts.invoiceBooking.base-definition">
+		<put-attribute name="title"
+			value="Stock Purchased Vechicles" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/invoice-booking/auction-invoice-booking.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+			<add-attribute
+				value="/resources/assets/custom/css/stock-view.css" />
+
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+
+			<add-attribute
+				value="/resources/assets/plugins/datatable/Select-1.2.6/js/dataTables.select.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/moment/min/moment.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/jquery.inputmask.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/common/form-mask.js" />
+			<add-attribute
+				value="/resources/assets/plugins/jquery.redirect-1.1.4/jquery.redirect.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/purchased-list.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/purchased-list-validation.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/arrrange-transport-validation.js" />
+		</put-list-attribute>
+
+	</definition>
+
+	<!-- Payment transport -->
+	<definition name="accounts.invoiceBooking.transport"
+		extends="accounts.invoiceBooking.base-definition">
+		<put-attribute name="title" value="Transport" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/invoice-booking/transport-invoice-booking.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/moment/min/moment.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/Select-1.2.6/js/dataTables.select.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.js" />
+
+			<add-attribute
+				value="/resources/assets/custom/js/validation/accounts/payment-transport.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/payments/payment-transport-completed.js" />
+
+		</put-list-attribute>
+	</definition>
+	<!-- Freight&Shipping RORO -->
+	<definition name="accounts.invoiceBooking.freight.roro"
+		extends="accounts.invoiceBooking.base-definition">
+		<put-attribute name="title" value="Freight-Shipping" />
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/invoice-booking/freight-shipping-roro-booking.jsp" />
+
+		<!-- Freight&Shipping StyleSheet -->
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+
+		</put-list-attribute>
+
+		<!-- Freight and Shipping Scripts -->
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/Select-1.2.6/js/dataTables.select.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/moment/min/moment.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js" />
+
+			<add-attribute
+				value="/resources/assets/custom/js/validation/accounts/freight-shipping-validation.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/payments/freight-shipping-roro.js" />
+
+		</put-list-attribute>
+
+	</definition>
+
+	<!-- Freight&Shipping CONTAINER -->
+	<definition name="accounts.invoiceBooking.freight.container"
+		extends="accounts.invoiceBooking.base-definition">
+		<put-attribute name="title" value="Freight-Shipping" />
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/invoice-booking/freight-shipping-container-booking.jsp" />
+
+		<!-- Freight&Shipping StyleSheet -->
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+
+		</put-list-attribute>
+
+		<!-- Freight and Shipping Scripts -->
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/Select-1.2.6/js/dataTables.select.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/moment/min/moment.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js" />
+
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/payments/freight-shipping-container.js" />
+
+		</put-list-attribute>
+
+	</definition>
+	<!-- Others -->
+	<definition name="accounts.invoiceBooking.genaralExpenses"
+		extends="accounts.invoiceBooking.base-definition">
+		<put-attribute name="title" value="General Expenses" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/invoice-booking/genaral-expenses-booking.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/moment/min/moment.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/Select-1.2.6/js/dataTables.select.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/payments/other-payment.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/payments/edit-other-payment.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/accounts/payment-others-validation.js" />
+
+		</put-list-attribute>
+	</definition>
+	<!-- Storage and Photos -->
+	<definition name="accounts.invoiceBooking.storageAndPhotos"
+		extends="accounts.invoiceBooking.base-definition">
+		<put-attribute name="title" value="Storage And Photos" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/invoice-booking/storage-photos-booking.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/jquery.redirect-1.1.4/jquery.redirect.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/payments/storage-photos.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/accounts/payment-storage-validation.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<!-- Other Direct Expense -->
+	<definition name="accounts.invoiceBooking.otherDirectExpense"
+		extends="accounts.invoiceBooking.base-definition">
+		<put-attribute name="title" value="Other Direct Expense" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/invoice-booking/other-direct-expense.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/jquery.redirect-1.1.4/jquery.redirect.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/payments/other-direct-expense.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/accounts/other-direct-expense-validation.js" />
+		</put-list-attribute>
+	</definition>
+	
+
+	<!-- Re-auction -->
+	<definition name="accounts.invoiceBooking.reauction"
+		extends="accounts.invoiceBooking.base-definition">
+		<put-attribute name="title" value="Re-Auction List" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/invoice-booking/reauction-invoice-booking.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/custom/css/custom.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+
+			<add-attribute
+				value="/resources/assets/custom/css/stock-view.css" />
+		</put-list-attribute>
+
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/reauction-list-validations.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/reauction-list.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Payment transport -->
+	<definition name="accounts.invoiceBooking.inspection"
+		extends="accounts.invoiceBooking.base-definition">
+		<put-attribute name="title" value="Inspection Booking" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/invoice-booking/inspection-invoice-booking.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/moment/min/moment.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/Select-1.2.6/js/dataTables.select.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/payments-inspection/inspection-invoice-booking.js" />
+		</put-list-attribute>
+	</definition>
+</tiles-definitions>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BillOfLandingTemplate" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ebc3148f-bae3-4cf3-829e-1507a1325874">
+	<parameter name="billOfLandingDto" class="com.nexware.aajapan.dto.BillOfLandingDto"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="773" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="317" y="70" width="100" height="10" isRemoveLineWhenBlank="true" uuid="00fc60c7-e518-4b97-a376-6395e032f64c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getBillOfLandingNo()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="317" y="106" width="100" height="10" isRemoveLineWhenBlank="true" uuid="f948f42e-9290-44e5-a16e-c5bab560e61e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getBookingNo()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="35" y="188" width="148" height="48" isRemoveLineWhenBlank="true" uuid="241d22d4-3a73-40d5-a963-a40450592d97"/>
+				<textElement>
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getNotifyParty()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="155" y="257" width="100" height="18" isRemoveLineWhenBlank="true" uuid="8b92e8ab-3d64-4197-802e-342c3eb68130"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getPlaceOfReceipt()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="28" y="286" width="100" height="24" isRemoveLineWhenBlank="true" uuid="85fc3136-67ef-43f6-8b8b-a357f06af1ca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getVesselVoyage()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="313" y="286" width="100" height="24" isRemoveLineWhenBlank="true" uuid="706908e8-4b3a-4bf1-a345-77b19b0b2e8e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getPortOfLoading()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="28" y="316" width="100" height="22" isRemoveLineWhenBlank="true" uuid="710097ff-9f33-43ed-ab99-ebc5e5a701ff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getPortOfDischarge()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="217" y="318" width="100" height="20" isRemoveLineWhenBlank="true" uuid="03f8d8d4-57b1-41f2-9cf9-3c0f3a09af42"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getPortOfDelivery()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="388" y="320" width="100" height="19" isRemoveLineWhenBlank="true" uuid="1d18972f-eddc-4303-a0e4-3bddf2b1a0f1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getFinalDestination()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="11" y="385" width="144" height="67" isRemoveLineWhenBlank="true" uuid="34913b3d-4348-46b6-9579-afe58f80bb2d"/>
+				<textElement>
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getContainerNo()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="162" y="385" width="108" height="67" isRemoveLineWhenBlank="true" uuid="27361339-2db3-4860-bf52-61bccfe328a3"/>
+				<textElement>
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getNoOfKinds()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="392" y="384" width="50" height="30" isRemoveLineWhenBlank="true" uuid="95701e42-8cdb-465b-9b14-67d19c3ad920"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getGrossWeight()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="487" y="384" width="43" height="30" isRemoveLineWhenBlank="true" uuid="69becccf-2d25-4f96-ae53-b989fa887dd0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getMeasurement()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="24" y="522" width="148" height="30" isRemoveLineWhenBlank="true" uuid="524efad7-ca65-46d2-8c27-5ec35711a30c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["SHIPPED ON BOARD . "+$P{billOfLandingDto}.getShipOnBoard()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="227" y="522" width="100" height="30" isRemoveLineWhenBlank="true" uuid="7de4c68e-72c6-44eb-8338-96b779227496"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ON."+$P{billOfLandingDto}.getShipOnBoardDate()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="445" y="523" width="99" height="30" isRemoveLineWhenBlank="true" uuid="7972a51a-4ab5-44f2-bb24-e5df7b1b28be"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getOriginPort()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="57" y="687" width="132" height="30" isRemoveLineWhenBlank="true" uuid="4f35fc73-8f67-4aa1-adf4-da964ae40ddc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getFreightCharges()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="33" y="741" width="90" height="30" isRemoveLineWhenBlank="true" uuid="3d982669-b803-48e3-b56e-0e5820291ede"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getPlaceAndDate()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="168" y="746" width="60" height="19" isRemoveLineWhenBlank="true" uuid="1578a6e9-1f8e-4b88-8325-6c7e00c926f2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getNoOfOriginalBL()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="743" width="120" height="10" uuid="ead81d8a-0ad3-46ff-b5ea-c0eaa9e8d029"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NISHICO CONTAINER LINE"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="150" y="621" width="90" height="19" isRemoveLineWhenBlank="true" uuid="309d3d36-79dc-42c4-b71e-e412e45c4608"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getNoOfPackages()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="420" y="621" width="96" height="19" isRemoveLineWhenBlank="true" uuid="c40e60a1-3915-4277-ba5c-eb357fd1fccd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getFreightPayableAt()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="390" y="772" width="100" height="1" uuid="d9ed0a4f-a6b6-46fc-b183-a28992fa4cbf"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="317" y="140" width="148" height="48" isRemoveLineWhenBlank="true" uuid="53472040-6aeb-4eee-8713-3b335945d5ae"/>
+				<textElement>
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getDeliveryAddress()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="29" y="30" width="260" height="50" isRemoveLineWhenBlank="true" uuid="97e953a6-c559-4aec-9bfa-cb9dec32ab6e"/>
+				<textElement>
+					<font fontName="MSMINCHO" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getShipper()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="31" y="106" width="51" height="10" isRemoveLineWhenBlank="true" uuid="26866c87-6449-467c-8f00-aac3f20cde3b"/>
+				<textElement>
+					<font fontName="MSMINCHO" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getConsignee()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="42" y="257" width="100" height="18" isRemoveLineWhenBlank="true" uuid="7e6cf706-f8f8-46f3-9cd1-031426188e70"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getPreCarriageBy()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="192" y="687" width="119" height="30" isRemoveLineWhenBlank="true" uuid="27d8a54b-fba4-4bd7-bb62-e99145a256d6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{billOfLandingDto}.getPrepaid()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

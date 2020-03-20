@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- Base Definition -->
+	<definition name="document.recycle.base-definition"
+		template="/WEB-INF/views/documents/layout/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/layout/header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/documents/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/layout/footer.jsp" />
+		<put-attribute name="pagescript" value="" />
+		<put-list-attribute name="stylesheets">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/css/dataTables.bootstrap.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/js/jquery.dataTables.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/js/dataTables.bootstrap.js" />
+		</put-list-attribute>
+
+	</definition>
+
+	<!-- Dashboard Page -->
+	<definition name="document.recycle.dashboard"
+		extends="document.recycle.base-definition">
+		<put-attribute name="title" value="Dashboard" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/documents/recycle/recycle-dashboard.jsp" />
+	</definition>
+
+
+	<!-- Recyce Claim -->
+	<definition name="document.recycle.claim"
+		extends="document.recycle.base-definition">
+		<put-attribute name="title" value="Recycle Claim" />
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/documents/recycle/recycle-claim.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+		</put-list-attribute>
+
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/moment/min/moment.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/documents/recycle-claim.js" />
+		</put-list-attribute>
+	</definition>
+
+
+	<definition name="documents.insurance.claim"
+		extends="document.recycle.base-definition">
+		<put-attribute name="title" value="Insurance Claim" />
+
+		<put-attribute name="body"
+			value="/WEB-INF/views/documents/recycle/insurance-claim.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+		</put-list-attribute>
+
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/moment/min/moment.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/documents/insurance-claim.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Recycle Status -->
+	<definition name="document.recycle.status"
+		extends="document.recycle.base-definition">
+		<put-attribute name="title" value="Recycle Status" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/documents/recycle/recycle-status.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true"></put-list-attribute>
+
+		<put-list-attribute name="javascripts"
+			inherit="true"></put-list-attribute>
+	</definition>
+</tiles-definitions>

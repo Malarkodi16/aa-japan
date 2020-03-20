@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="JaaiBangladeshInspectionTemplate" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="88fcab66-d7bf-4830-bbd9-d81ba5ac72d5">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="stockItems" uuid="c9e77672-ecad-4b6f-9c7b-83f8182d2068">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="chassisNo" class="java.lang.String"/>
+		<field name="model" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="stockItems" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="inspectionDetails" class="com.nexware.aajapan.dto.InspectionApplicationDto"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="153" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="37" width="555" height="116" uuid="a8d2b562-d3e0-4046-ba6b-d040453bdb94">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="-10" width="555" height="127" uuid="a9f20d5a-92fa-46e1-8f78-6adab1fc5560"/>
+				</rectangle>
+				<line>
+					<reportElement x="89" y="-10" width="1" height="127" uuid="8d0de638-6adf-4c2a-9cd8-229301fe88fc">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+				</line>
+				<line>
+					<reportElement x="0" y="10" width="555" height="1" uuid="edb006f5-a8cc-43c2-8182-a2d0356ad049"/>
+				</line>
+				<line>
+					<reportElement x="0" y="30" width="554" height="1" uuid="8b5e6509-0a1d-4616-8294-20565106c17b">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+				</line>
+				<line>
+					<reportElement x="0" y="50" width="555" height="1" uuid="a093c507-0379-4b88-9017-e398ca5ce801"/>
+				</line>
+				<line>
+					<reportElement x="90" y="71" width="460" height="1" uuid="e7b9cf6c-b88e-4555-8410-15d3e18214c0">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+				</line>
+				<line>
+					<reportElement x="88" y="92" width="465" height="1" uuid="c9fdab32-7dfc-4bcc-86bf-7961a601e233">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+				</line>
+				<line>
+					<reportElement x="190" y="51" width="1" height="65" uuid="7fea4cc6-8b3e-4d3b-9451-ea89cef5a987">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+				</line>
+				<line>
+					<reportElement x="460" y="10" width="1" height="40" uuid="70c25e41-7935-4530-b830-dc9789826a57">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+				</line>
+				<line>
+					<reportElement x="367" y="10" width="1" height="40" uuid="fded7e2c-36d9-48a7-9c4c-7cc06c6f1161">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+				</line>
+				<staticText>
+					<reportElement x="0" y="-10" width="89" height="20" uuid="dc1c20a3-12a3-4e58-a384-aff2cabb3178"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="12"/>
+					</textElement>
+					<text><![CDATA[住   　所]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="10" width="85" height="20" uuid="51fdc505-0ae7-4b4b-8e10-38c5b383a846">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="12"/>
+					</textElement>
+					<text><![CDATA[会  社 名]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="2" y="31" width="87" height="20" uuid="b3d34e7a-507b-42fa-9d91-a3dd2d47122e">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="12"/>
+					</textElement>
+					<text><![CDATA[電   　話]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="90" y="-10" width="40" height="20" uuid="ccfcc961-7a79-4679-965f-42ecaf5078e8"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="12"/>
+					</textElement>
+					<text><![CDATA[〒]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="368" y="10" width="94" height="20" uuid="6fe45cb7-30fe-4643-bdac-7d81a513ae53">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="12"/>
+					</textElement>
+					<text><![CDATA[担当者名]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="368" y="31" width="94" height="20" uuid="3d4c41e2-6833-44d6-922a-2524f62c77ec">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="12"/>
+					</textElement>
+					<text><![CDATA[F   A   X]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="27" y="52" width="30" height="65" uuid="3027cc95-f247-4617-8337-dca113ca06d6">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+						<font fontName="MSMINCHO" size="12"/>
+					</textElement>
+					<text><![CDATA[車
+両
+置
+き
+場]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="89" y="50" width="100" height="21" uuid="f3ddf370-eb03-4e6a-a873-fd37173f132f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="12"/>
+					</textElement>
+					<text><![CDATA[住   　所]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="88" y="71" width="100" height="21" uuid="12b7bf13-0691-48b9-88b4-d8a4d3ee6924">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="12"/>
+					</textElement>
+					<text><![CDATA[会  社 名]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="89" y="93" width="100" height="21" uuid="0dd40a4f-b7de-494c-b4bd-4d39ba451b8e">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="12"/>
+					</textElement>
+					<text><![CDATA[担当者名]]></text>
+				</staticText>
+				<line>
+					<reportElement x="293" y="93" width="1" height="21" uuid="634a7df5-dd72-44c5-b1f8-cb9ecaca1e8e">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+				</line>
+				<line>
+					<reportElement x="392" y="94" width="1" height="21" uuid="520d9c86-b947-4ee3-a970-499f17257329">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+				</line>
+				<staticText>
+					<reportElement x="297" y="93" width="93" height="21" uuid="087886b7-d854-431d-b589-4cf9eb2e8cd8">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="12"/>
+					</textElement>
+					<text><![CDATA[電   　話]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="130" y="-9" width="422" height="19" uuid="a8183b13-6fbc-4fc6-ab6b-e75c4818dc76"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="12"/>
+					</textElement>
+					<text><![CDATA[224-0025      神奈川県横浜市都筑区早渕1-28-21]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="90" y="10" width="277" height="20" uuid="7370c3d0-c89a-4a45-ada1-f78c6a8d6cf9">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[　アルアインジャパン株式会社]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="462" y="10" width="90" height="20" uuid="2e1895ed-8ac3-4a8a-8a1d-d7a5a95ac6bc">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="12"/>
+					</textElement>
+					<text><![CDATA[大友]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="91" y="31" width="100" height="20" uuid="6fb19578-b52f-484b-8ce1-3ba426348b62">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="12"/>
+					</textElement>
+					<text><![CDATA[045-594-0507]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="462" y="30" width="90" height="20" uuid="a0ca26b0-99e3-45da-8a9a-f617d88a95bd">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="12"/>
+					</textElement>
+					<text><![CDATA[045-594-0508]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="196" y="72" width="353" height="20" uuid="1c5b5923-40a4-4b90-96de-1f1a59e44739">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="12"/>
+					</textElement>
+					<text><![CDATA[ECLエージェンシー木更津営業所　オーシャンヤード]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement stretchType="ContainerHeight" x="0" y="-10" width="555" height="16" uuid="2bd0796d-a831-4d44-8840-bae4174c4d48"/>
+				<textElement textAlignment="Center">
+					<font fontName="MSMINCHO" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[輸 出 中 古 車 査 定 依 頼 書]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="213" y="6" width="132" height="16" uuid="8e15b1dc-a610-4bd3-bc49-e055dfbe8366"/>
+				<textElement>
+					<font fontName="MSMINCHO" size="12"/>
+				</textElement>
+				<text><![CDATA[（バングラディッシュ）      ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="389" y="9" width="151" height="16" uuid="3199b66c-4c6b-4b5d-abb1-a0a08903dd66"/>
+				<textElement textAlignment="Right">
+					<font fontName="MSMINCHO" size="15"/>
+				</textElement>
+				<text><![CDATA[  FAX:06-6762-5435]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="6" width="555" height="54" uuid="4aa86fe7-ce6c-42e1-b0e2-7063022f7bfd">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="stockItems" uuid="6b6b6803-78df-4a7e-befa-e049a6c11336">
+						<dataSourceExpression><![CDATA[$P{stockItems}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="80" uuid="b061890d-3c02-4751-b9ff-067dbf76efb0">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="e62e12f6-bf6d-444d-ba8b-7499825adf34"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="17"/>
+								</textElement>
+								<text><![CDATA[番　号]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="20" uuid="bda4fe8d-3535-4145-8047-818547a430c2"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="16"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="300" uuid="3f00ab10-ba72-4472-856f-81ef08f4d8cc">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="300" height="30" uuid="6116d7ee-7316-4dff-a069-0b80bbf0d80e"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="17"/>
+								</textElement>
+								<text><![CDATA[車　台　番　号]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="300" height="20" uuid="46c00470-644b-4630-8057-4699dca35dd5"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="16"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{chassisNo}==null?"":$F{chassisNo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="172" uuid="6dab32f6-beed-4277-a6cd-5b3a3b5a7079">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="172" height="30" uuid="4c263fa5-5ff3-40ef-a7d1-e770a5034ea9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="17"/>
+								</textElement>
+								<text><![CDATA[車　名]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="Table_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="172" height="20" uuid="0d22188f-a81b-4d51-9c3f-505438c852e9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="16"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{model}==null?"":$F{model}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="152">
+			<staticText>
+				<reportElement x="0" y="4" width="70" height="20" uuid="6601982e-ee73-42e4-b2bb-2af5b2d264c6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ヤード]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="26" width="100" height="20" uuid="eb0e0624-a3b7-4f73-8771-bb7e5c4d89b2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[搬入完了　]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="47" width="156" height="1" uuid="2f1d5ef4-11e7-42d6-bb36-780421fc64f6"/>
+			</line>
+			<line>
+				<reportElement x="380" y="46" width="140" height="1" uuid="b4306e9a-0954-4c82-8aac-055741bcbfb4"/>
+			</line>
+			<staticText>
+				<reportElement x="380" y="26" width="100" height="20" uuid="8a64c172-8d76-4fed-b725-90162a4c4a49">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="14"/>
+				</textElement>
+				<text><![CDATA[出港予定]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="179" y="74" width="130" height="20" uuid="e2514327-edba-4608-a88e-a39b1f926c0f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="14"/>
+				</textElement>
+				<text><![CDATA[ ＊査定協会記入欄]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="100" width="79" height="20" uuid="ae5ed429-ecf2-4359-9136-b62e80f069a4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="14"/>
+				</textElement>
+				<text><![CDATA[検査日]]></text>
+			</staticText>
+			<line>
+				<reportElement x="306" y="124" width="80" height="1" uuid="3b18f022-5b56-4da2-be56-313c5ca06918">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="450" y="81" width="100" height="20" forecolor="#F04441" uuid="cc109e9c-db3b-44d2-828c-805889c6b6f8"/>
+				<textElement>
+					<font fontName="MSMINCHO" size="12"/>
+				</textElement>
+				<text><![CDATA[★検査希望日]]></text>
+			</staticText>
+			<line>
+				<reportElement x="425" y="124" width="125" height="1" uuid="f0cfb81b-5b55-4d64-8b89-9c9c8c00cca7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="399" y="132" width="154" height="20" uuid="c40c0228-5c9d-4741-a9a3-1c1df30cc5fe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[   宜しくお願い致します。]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="2" y="51" width="156" height="80" uuid="9abf4e83-6684-4a87-8813-0a9f265ade8b"/>
+				<rectangle>
+					<reportElement x="0" y="0" width="156" height="80" uuid="e7cc060a-387d-4714-b8d1-d0ae5aa01e21"/>
+				</rectangle>
+				<line>
+					<reportElement x="0" y="26" width="155" height="1" uuid="d7b89740-05a9-4751-8365-bf220b308d59"/>
+				</line>
+				<line>
+					<reportElement x="80" y="0" width="1" height="80" uuid="bac0d49a-d52b-40d6-99f0-fb98d6703b74"/>
+				</line>
+				<staticText>
+					<reportElement x="2" y="1" width="76" height="20" uuid="1e995f6c-2994-4532-b44e-45687dbc11e9">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="14"/>
+					</textElement>
+					<text><![CDATA[受付印]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="86" y="2" width="67" height="20" uuid="66f9f96e-0e51-46bf-bdff-2aeb8c4ec023">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="14"/>
+					</textElement>
+					<text><![CDATA[検査長印]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</lastPageFooter>
+</jasperReport>

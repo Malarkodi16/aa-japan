@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- Base Definition -->
+	<definition name="accounts.parts.purchase.base-definition"
+		template="/WEB-INF/views/accounts/layout/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/layout/acc_header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/accounts/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/layout/footer.jsp" />
+		<put-list-attribute name="stylesheets">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/css/dataTables.bootstrap.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/js/jquery.dataTables.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/js/dataTables.bootstrap.min.js" />
+		</put-list-attribute>
+
+	</definition>
+
+	<!-- LC Create -->
+	<definition name="accounts.pp.create"
+		extends="accounts.parts.purchase.base-definition">
+		<put-attribute name="title"
+			value="Parts Purchase Create" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/parts-purchase/pp-create.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/jquery.redirect-1.1.4/jquery.redirect.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/parts-purchase/pp-create.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/accounts/create-pp-validation.js" />
+		</put-list-attribute>
+	</definition>
+	<!-- LC List -->
+	<definition name="accounts.pp.list"
+		extends="accounts.parts.purchase.base-definition">
+		<put-attribute name="title" value="Parts Purchase List" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/parts-purchase/pp-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/Select-1.2.6/js/dataTables.select.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/parts-purchase/pp-list.js" />
+		</put-list-attribute>
+	</definition>
+</tiles-definitions>

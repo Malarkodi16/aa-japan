@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- Base Definition -->
+	<definition
+		name="shipping.shipping-management.base-definition"
+		template="/WEB-INF/views/shipping/layout/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/layout/header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/shipping/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/layout/footer.jsp" />
+		<put-list-attribute name="stylesheets">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/css/dataTables.bootstrap.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/js/jquery.dataTables.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/js/dataTables.bootstrap.min.js" />
+		</put-list-attribute>
+
+	</definition>
+	<definition name="shipping.shipping-management.available"
+		extends="shipping.shipping-management.base-definition">
+		<put-attribute name="title" value="Shipping" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/shipping_management/available_for_shipping.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+			<!-- select2-4.0.6-rc.1 select2-4.0.5 -->
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			<add-attribute
+				value="/resources/assets/custom/css/stock-view.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+
+
+			<add-attribute
+				value="/resources/assets/plugins/datatable/Select-1.2.6/js/dataTables.select.min.js" />
+
+			<add-attribute
+				value="/resources/assets/bower_components/moment/min/moment.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/dataTables.buttons.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/jszip.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/buttons.html5.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/shipping_management/shipping-available.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/arrrange-transport-validation.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/shipping-instruction-validation.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/arrange-inspection-validation.js" />
+		</put-list-attribute>
+
+	</definition>
+	<definition name="shipping.shipping-management.requested"
+		extends="shipping.shipping-management.base-definition">
+		<put-attribute name="title" value="Shipping" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/shipping_management/shipping_requested.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+			<!-- select2-4.0.6-rc.1 select2-4.0.5 -->
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			<add-attribute
+				value="/resources/assets/custom/css/stock-view.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+
+
+			<add-attribute
+				value="/resources/assets/plugins/datatable/Select-1.2.6/js/dataTables.select.min.js" />
+
+			<add-attribute
+				value="/resources/assets/bower_components/moment/min/moment.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.js" />
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/dataTables.buttons.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/jszip.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/buttons.html5.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/shipping_management/shipping-requested.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/shipping_management/shipping-container-allocation-create.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/datatables.sorting.min.js"/>
+		</put-list-attribute>
+
+	</definition>
+	<definition name="shipping.shipping-management.container"
+		extends="shipping.shipping-management.base-definition">
+		<put-attribute name="title" value="Shipping" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/shipping_management/shipping_container.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+			<!-- select2-4.0.6-rc.1 select2-4.0.5 -->
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+ 
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			<add-attribute
+				value="/resources/assets/custom/css/stock-view.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/Select-1.2.6/js/dataTables.select.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/dataTables.buttons.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/jszip.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/buttons.html5.min.js" />
+
+			<add-attribute
+				value="/resources/assets/bower_components/moment/min/moment.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.js" />
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/shipping_management/shipping-container.js" />
+		</put-list-attribute>
+	</definition>
+	<definition name="shipping.shipping-management.roro"
+		extends="shipping.shipping-management.base-definition">
+		<put-attribute name="title" value="Shipping" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/shipping_management/shipping_roro.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+			<!-- select2-4.0.6-rc.1 select2-4.0.5 -->
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			<add-attribute
+				value="/resources/assets/custom/css/stock-view.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/Select-1.2.6/js/dataTables.select.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/dataTables.buttons.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/jszip.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/buttons.html5.min.js" />
+
+			<add-attribute
+				value="/resources/assets/bower_components/moment/min/moment.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.js" />
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/shipping_management/shipping-roro.js" />
+			
+		</put-list-attribute>
+	</definition>
+</tiles-definitions>

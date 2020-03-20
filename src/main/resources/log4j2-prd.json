@@ -1,0 +1,61 @@
+{
+	"configuration": {
+		"name": "Default",
+		"properties": {
+			"property": [
+				{
+					"name": "log-path",
+					"value": "/home/ec2-user/aa-japan/logs/aaj"
+				},
+				{
+					"name": "archive",
+					"value": "${log-path}/archive"
+				}
+			]
+		},
+		"appenders": {
+			"Console": {
+				"name": "Console-Appender",
+				"target": "SYSTEM_OUT",
+				"PatternLayout": {
+					"pattern": "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"
+				}
+			},
+			"RollingFile": {
+				"name": "RollingFile-Appender",
+				"fileName": "${log-path}/log.log",
+				"filePattern": "${log-path}/log-backup-%d{dd-MM-yyyy-HH-mm-ss}-%i.log.zip",
+				"PatternLayout": {
+					"pattern": "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"
+				},
+				"Policies": {
+					"SizeBasedTriggeringPolicy": {
+						"size": "2 MB"
+					}
+				},
+				"DefaultRolloverStrategy": {
+					"max": "2"
+				}
+			}
+		},
+		"loggers": {
+			"logger": {
+				"name": "com.nexware.aajapan",
+				"level": "debug",
+				"appender-ref": [
+					{
+						"ref": "RollingFile-Appender",
+						"level": "error"
+					}
+				]
+			},
+			"root": {
+				"level": "info",
+				"appender-ref": {
+					"_comment": "Console-Appender or RollingFile-Appender",
+					"ref": "RollingFile-Appender"
+				}
+			}
+		}
+	}
+}

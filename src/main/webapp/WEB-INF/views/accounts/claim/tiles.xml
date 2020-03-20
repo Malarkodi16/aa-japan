@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<!-- # Copyright (c) 2018 - AAJ # @Author: Rajlakshman(Nexware) # @Date: 
+	# @Last Modified by: Rajlakshman(Nexware) # @Last Modified time: 2018-11-15 -->
+<tiles-definitions>
+	<!-- Base Definition -->
+	<definition name="accounts.claim.base-definition"
+		template="/WEB-INF/views/accounts/layout/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/layout/acc_header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/accounts/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/layout/footer.jsp" />
+		<put-list-attribute name="stylesheets">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/css/dataTables.bootstrap.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/js/jquery.dataTables.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/js/dataTables.bootstrap.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Claim-TAX -->
+	<definition name="accounts.claim.tax"
+		extends="accounts.claim.base-definition">
+		<put-attribute name="title" value="Tax" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/claim/tax.jsp" />
+
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/css/select2.min.css" />
+		</put-list-attribute>
+
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/moment/min/moment.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/claim/tax.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Claim-Recycle -->
+	<definition name="accounts.claim.recycle"
+		extends="accounts.claim.base-definition">
+		<put-attribute name="title" value="Recycle" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/claim/recycle.jsp" />
+
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+		</put-list-attribute>
+
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/Select-1.2.6/js/dataTables.select.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/moment/min/moment.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/dataTables.buttons.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/jszip.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/buttons.html5.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/claim/recycle.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Claim-CarTax -->
+	<definition name="accounts.claim.cartax"
+		extends="accounts.claim.base-definition">
+		<put-attribute name="title" value="Car Tax" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/claim/cartax.jsp" />
+
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+		</put-list-attribute>
+
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/Select-1.2.6/js/dataTables.select.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/moment/min/moment.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/accounts/update-car-tax.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/claim/cartax.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Claim-Insurance -->
+	<definition name="accounts.claim.insurance"
+		extends="accounts.claim.base-definition">
+		<put-attribute name="title" value="Insurance" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/claim/insurance.jsp" />
+
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+		</put-list-attribute>
+
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/Select-1.2.6/js/dataTables.select.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/claim/insurance.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Claim-Insurance -->
+	<definition name="accounts.claim.radiation"
+		extends="accounts.claim.base-definition">
+		<put-attribute name="title" value="Radiation" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/claim/radiation.jsp" />
+
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/all.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/css/select2.min.css" />
+		</put-list-attribute>
+
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/iCheck/icheck.min.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/bootstrap-daterangepicker/daterangepicker.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/claim/radiation.js" />
+		</put-list-attribute>
+	</definition>
+
+
+</tiles-definitions>

@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LcInvoice" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6ccf9005-132b-42b2-8482-c9e9d02e39ab">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="itemDataset" uuid="50c7709b-3722-4927-91c3-aecce2baf1c8">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="insurance" class="java.lang.Double">
+			<fieldDescription><![CDATA[insurance]]></fieldDescription>
+		</field>
+		<field name="proformaInvoiceDate" class="java.util.Date">
+			<fieldDescription><![CDATA[proformaInvoiceDate]]></fieldDescription>
+		</field>
+		<field name="fuel" class="java.lang.String">
+			<fieldDescription><![CDATA[fuel]]></fieldDescription>
+		</field>
+		<field name="freight" class="java.lang.Double">
+			<fieldDescription><![CDATA[freight]]></fieldDescription>
+		</field>
+		<field name="type" class="java.lang.String">
+			<fieldDescription><![CDATA[type]]></fieldDescription>
+		</field>
+		<field name="stockAmount" class="java.lang.Double">
+			<fieldDescription><![CDATA[stockAmount]]></fieldDescription>
+		</field>
+		<field name="bank" class="java.lang.String">
+			<fieldDescription><![CDATA[bank]]></fieldDescription>
+		</field>
+		<field name="total" class="java.lang.Double">
+			<fieldDescription><![CDATA[total]]></fieldDescription>
+		</field>
+		<field name="licenseDoc" class="java.lang.String">
+			<fieldDescription><![CDATA[licenseDoc]]></fieldDescription>
+		</field>
+		<field name="notifyParty" class="java.lang.String">
+			<fieldDescription><![CDATA[notifyParty]]></fieldDescription>
+		</field>
+		<field name="model" class="java.lang.String">
+			<fieldDescription><![CDATA[model]]></fieldDescription>
+		</field>
+		<field name="lcExpiryDate" class="java.util.Date">
+			<fieldDescription><![CDATA[lcExpiryDate]]></fieldDescription>
+		</field>
+		<field name="lcDtlId" class="java.lang.String">
+			<fieldDescription><![CDATA[lcDtlId]]></fieldDescription>
+		</field>
+		<field name="shippingMarks" class="java.lang.String">
+			<fieldDescription><![CDATA[shippingMarks]]></fieldDescription>
+		</field>
+		<field name="firstRegDate" class="java.util.Date">
+			<fieldDescription><![CDATA[firstRegDate]]></fieldDescription>
+		</field>
+		<field name="equipment" class="java.lang.String">
+			<fieldDescription><![CDATA[equipment]]></fieldDescription>
+		</field>
+		<field name="maker" class="java.lang.String">
+			<fieldDescription><![CDATA[maker]]></fieldDescription>
+		</field>
+		<field name="npAddress" class="java.lang.String">
+			<fieldDescription><![CDATA[npAddress]]></fieldDescription>
+		</field>
+		<field name="lcNo" class="java.lang.String">
+			<fieldDescription><![CDATA[lcNo]]></fieldDescription>
+		</field>
+		<field name="hsCode" class="java.lang.String">
+			<fieldDescription><![CDATA[hsCode]]></fieldDescription>
+		</field>
+		<field name="proformaInvoiceNo" class="java.lang.String">
+			<fieldDescription><![CDATA[proformaInvoiceNo]]></fieldDescription>
+		</field>
+		<field name="chassisNo" class="java.lang.String">
+			<fieldDescription><![CDATA[chassisNo]]></fieldDescription>
+		</field>
+		<field name="fob" class="java.lang.Double">
+			<fieldDescription><![CDATA[fob]]></fieldDescription>
+		</field>
+		<field name="shippingTerms" class="java.lang.String">
+			<fieldDescription><![CDATA[shippingTerms]]></fieldDescription>
+		</field>
+		<field name="beneficiaryCertify" class="java.lang.String">
+			<fieldDescription><![CDATA[beneficiaryCertify]]></fieldDescription>
+		</field>
+		<field name="sFirstRegDate" class="java.lang.String">
+			<fieldDescription><![CDATA[sFirstRegDate]]></fieldDescription>
+		</field>
+		<field name="lcInvoiceNo" class="java.lang.String">
+			<fieldDescription><![CDATA[lcInvoiceNo]]></fieldDescription>
+		</field>
+		<field name="createdDate" class="java.util.Date">
+			<fieldDescription><![CDATA[createdDate]]></fieldDescription>
+		</field>
+		<field name="perVessel" class="java.lang.String">
+			<fieldDescription><![CDATA[perVessel]]></fieldDescription>
+		</field>
+		<field name="from" class="java.lang.String">
+			<fieldDescription><![CDATA[from]]></fieldDescription>
+		</field>
+		<field name="to" class="java.lang.String">
+			<fieldDescription><![CDATA[to]]></fieldDescription>
+		</field>
+		<field name="sailingDate" class="java.util.Date">
+			<fieldDescription><![CDATA[sailingDate]]></fieldDescription>
+		</field>
+		<field name="inspectionCertificateNo" class="java.lang.String"/>
+		<field name="exportCertificateNo" class="java.lang.String"/>
+		<field name="issueDate" class="java.util.Date"/>
+		<field name="expiryDate" class="java.util.Date"/>
+		<field name="inspection" class="java.lang.Double"/>
+		<field name="billOfExchangeNo" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="logo" class="java.awt.image.BufferedImage"/>
+	<parameter name="tLcDetails" class="com.nexware.aajapan.dto.TLcInvoiceDto"/>
+	<parameter name="itemList" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="insurance" class="java.lang.Double">
+		<fieldDescription><![CDATA[insurance]]></fieldDescription>
+	</field>
+	<field name="proformaInvoiceDate" class="java.util.Date">
+		<fieldDescription><![CDATA[proformaInvoiceDate]]></fieldDescription>
+	</field>
+	<field name="fuel" class="java.lang.String">
+		<fieldDescription><![CDATA[fuel]]></fieldDescription>
+	</field>
+	<field name="freight" class="java.lang.Double">
+		<fieldDescription><![CDATA[freight]]></fieldDescription>
+	</field>
+	<field name="type" class="java.lang.String">
+		<fieldDescription><![CDATA[type]]></fieldDescription>
+	</field>
+	<field name="stockAmount" class="java.lang.String">
+		<fieldDescription><![CDATA[stockAmount]]></fieldDescription>
+	</field>
+	<field name="bank" class="java.lang.String">
+		<fieldDescription><![CDATA[bank]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Double">
+		<fieldDescription><![CDATA[total]]></fieldDescription>
+	</field>
+	<field name="licenseDoc" class="java.lang.String">
+		<fieldDescription><![CDATA[licenseDoc]]></fieldDescription>
+	</field>
+	<field name="notifyParty" class="java.lang.String">
+		<fieldDescription><![CDATA[notifyParty]]></fieldDescription>
+	</field>
+	<field name="model" class="java.lang.String">
+		<fieldDescription><![CDATA[model]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="lcExpiryDate" class="java.util.Date">
+		<fieldDescription><![CDATA[lcExpiryDate]]></fieldDescription>
+	</field>
+	<field name="lcDtlId" class="java.lang.String">
+		<fieldDescription><![CDATA[lcDtlId]]></fieldDescription>
+	</field>
+	<field name="shippingMarks" class="java.lang.String">
+		<fieldDescription><![CDATA[shippingMarks]]></fieldDescription>
+	</field>
+	<field name="firstRegDate" class="java.util.Date">
+		<fieldDescription><![CDATA[firstRegDate]]></fieldDescription>
+	</field>
+	<field name="equipment" class="java.util.List">
+		<fieldDescription><![CDATA[equipment]]></fieldDescription>
+	</field>
+	<field name="maker" class="java.lang.String">
+		<fieldDescription><![CDATA[maker]]></fieldDescription>
+	</field>
+	<field name="npAddress" class="java.lang.String">
+		<fieldDescription><![CDATA[npAddress]]></fieldDescription>
+	</field>
+	<field name="lcNo" class="java.lang.String">
+		<fieldDescription><![CDATA[lcNo]]></fieldDescription>
+	</field>
+	<field name="hsCode" class="java.lang.String">
+		<fieldDescription><![CDATA[hsCode]]></fieldDescription>
+	</field>
+	<field name="proformaInvoiceNo" class="java.lang.String">
+		<fieldDescription><![CDATA[proformaInvoiceNo]]></fieldDescription>
+	</field>
+	<field name="chassisNo" class="java.lang.String">
+		<fieldDescription><![CDATA[chassisNo]]></fieldDescription>
+	</field>
+	<field name="fob" class="java.lang.Double">
+		<fieldDescription><![CDATA[fob]]></fieldDescription>
+	</field>
+	<field name="shippingTerms" class="java.lang.String">
+		<fieldDescription><![CDATA[shippingTerms]]></fieldDescription>
+	</field>
+	<field name="beneficiaryCertify" class="java.lang.String">
+		<fieldDescription><![CDATA[beneficiaryCertify]]></fieldDescription>
+	</field>
+	<field name="sFirstRegDate" class="java.lang.String">
+		<fieldDescription><![CDATA[sFirstRegDate]]></fieldDescription>
+	</field>
+	<field name="lcInvoiceNo" class="java.lang.String">
+		<fieldDescription><![CDATA[lcInvoiceNo]]></fieldDescription>
+	</field>
+	<field name="createdDate" class="java.util.Date">
+		<fieldDescription><![CDATA[createdDate]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="108">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<staticText>
+				<reportElement x="135" y="0" width="305" height="35" uuid="71ca6511-f723-4c58-83f1-be7f7347c46f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="27.5" isBold="true"/>
+					<paragraph lineSpacingSize="1.0"/>
+				</textElement>
+				<text><![CDATA[AA JAPAN (PVT) LTD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="35" width="250" height="20" uuid="4aadcb62-ddc8-4606-a587-5c7d0f9e03ed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[EXPORTERS OF BRAND NEW & RECONDITION VEHICLES ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="51" width="250" height="22" uuid="dea69f0c-b845-4302-973f-75f350a8fa4d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Darus Salam Bldg., 1-28-21 HayabuchiI ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="65" width="180" height="20" uuid="98dd06b0-ff33-4356-983d-d0b833113745"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tsuzuki-Ku, Yokohama-Shi,  Japan ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="77" width="50" height="20" uuid="c3dbbaeb-fc88-4a74-8695-e0d648c2e880"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8"/>
+				</textElement>
+				<text><![CDATA[MOBILE: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="80" width="40" height="13" uuid="d643c71b-88e6-4a91-8036-89e8013e819f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[TEL:]]></text>
+			</staticText>
+			<image>
+				<reportElement x="5" y="0" width="85" height="80" uuid="4c0d9978-7926-4860-be72-05dc9a82da5f"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="415" y="77" width="100" height="20" uuid="f9b1b0e2-0493-4dc0-adf1-d4770b003686"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="MSMINCHO" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["+81 80-1094-0907"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="55" y="80" width="100" height="13" uuid="fd341933-1fec-45c7-beda-dc13a00acc60"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="MSMINCHO"/>
+				</textElement>
+				<textFieldExpression><![CDATA["+(81) 45-594-0507"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="93" width="40" height="11" uuid="70381ed0-dde1-415c-8dbb-62d2cdc8f495"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[FAX:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="55" y="93" width="100" height="11" uuid="4b936f9c-38c7-44b4-89ce-5c5fb0d11791"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font fontName="MSMINCHO"/>
+				</textElement>
+				<textFieldExpression><![CDATA["+(81) 45-594-0508"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="375" y="86" width="50" height="22" uuid="49da0bcd-6305-4c94-980c-b5e361320872"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8"/>
+				</textElement>
+				<text><![CDATA[E-MAIL:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="415" y="85" width="100" height="23" uuid="94e66d80-a32a-4c02-aa32-bb17e0c92a26"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["info@aajapancars.com"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="694" splitType="Stretch">
+			<componentElement>
+				<reportElement positionType="Float" x="10" y="-4" width="555" height="674" uuid="d8f53e04-f300-4bd2-9f96-f300baaf0235">
+					<property name="net.sf.jasperreports.export.headertoolbar.table.name" value=""/>
+				</reportElement>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="itemDataset" uuid="43d48173-5751-4cb6-b9b2-64685b2e0d85">
+						<dataSourceExpression><![CDATA[$P{itemList}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="674" width="555">
+						<frame>
+							<reportElement x="1" y="0" width="553" height="360" uuid="881ffc2f-6434-48d3-b48c-87b5af9ac2b7"/>
+							<staticText>
+								<reportElement x="230" y="6" width="70" height="20" uuid="3578099a-69fd-4ecf-9ca2-62b2bc7a08d8"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="12.5" isBold="true"/>
+								</textElement>
+								<text><![CDATA[INVOICE]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="350" y="21" width="60" height="8" uuid="36fd72ac-b554-4ac8-846b-687cc293e85b"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<text><![CDATA[DATE]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement positionType="Float" x="420" y="21" width="100" height="8" uuid="c1604406-e22b-4dd1-ac2c-89626e69fc4e"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[":  "+new SimpleDateFormat("dd-MMM-yyyy").format($F{createdDate})]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="420" y="11" width="100" height="10" uuid="3ce4bfb9-0615-4594-8119-b360d95938e9"/>
+								<textElement verticalAlignment="Bottom">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[":  "+$F{lcInvoiceNo}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement x="10" y="25" width="28" height="10" uuid="a7f5374d-fa0b-448e-8578-7cf52c6debe3"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<text><![CDATA[MESSRS]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="100" y="25" width="10" height="11" uuid="7dd69ad7-7cdb-43fe-bc53-0777f3db7794"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[:]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement x="120" y="25" width="90" height="10" uuid="6ec196d2-b855-4278-a526-2a7b210f33c1"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{notifyParty}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement x="10" y="35" width="40" height="10" uuid="261dbe43-f5f4-46f2-85e3-77ffcd5878fb"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="6"/>
+								</textElement>
+								<text><![CDATA[(APPLICANT) ]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="10" y="45" width="40" height="10" uuid="b27851f0-1571-4052-b95f-f5cb96f6dd5f"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<text><![CDATA[(SOLD TO) ]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="10" y="55" width="60" height="10" uuid="4346096d-cd12-447c-8251-f453664fb7c6"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<text><![CDATA[(NOTIFY PARTY) ]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement x="120" y="35" width="90" height="30" uuid="e4b60f42-2923-4aee-b223-ec63ef38ee34"/>
+								<textElement textAlignment="Left" verticalAlignment="Top">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{npAddress}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement x="10" y="71" width="88" height="10" uuid="b749c667-381a-47a5-bf67-4a54a82b56b1"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<text><![CDATA[SHIPPED PER (VESSEL) ]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="10" y="99" width="40" height="10" uuid="bac0ba32-479a-497f-93b4-d81ffba9c61d"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<text><![CDATA[CONSIGNEE]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="10" y="112" width="70" height="10" uuid="957d81af-4796-4eae-910a-cd0039f90e7a"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<text><![CDATA[SHIPPING TERMS
+ ]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="10" y="126" width="70" height="10" uuid="175bcd59-0138-4db7-9839-03d8b5cda398"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<text><![CDATA[SHIPPING MARKS ]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="100" y="98" width="10" height="11" uuid="2a74f8e1-a88d-4110-bee3-2f7bcde66e45"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[:]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="100" y="112" width="10" height="11" uuid="9e6d482a-8a73-4c7d-8340-1f51e0caa2a9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[:]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="100" y="71" width="10" height="11" uuid="58214bac-9640-452e-8772-e7338b6945e7"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[:]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="100" y="126" width="10" height="10" uuid="1eb050e1-f28c-42b4-af55-6579de6b5abf"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[:]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement x="120" y="71" width="100" height="10" uuid="3b1b3228-3f70-4f8e-aae5-77efb768a0e6"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{perVessel}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement x="11" y="83" width="18" height="10" uuid="3f2d6e74-16b9-4473-8f67-de8d3ab88ffa"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<text><![CDATA[FROM]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="100" y="84" width="10" height="11" uuid="00f944ed-f9b7-4060-821f-06bd1bea9b59"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[:]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement x="120" y="83" width="100" height="10" uuid="9019d795-3b46-499a-98a4-0db2dd83c42b"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{from}]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="120" y="99" width="350" height="10" uuid="6bb4824c-10a6-4e6e-b0fc-b0887561189c"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA["TO THE ORDER OF "+$F{bank}]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="120" y="112" width="160" height="10" uuid="3915668f-50c6-4d95-907a-38d4bcca2af7"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{shippingTerms}]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="120" y="127" width="320" height="20" uuid="95da0789-320f-4f85-a8ce-939634e46fc0"/>
+								<textElement verticalAlignment="Top">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{shippingMarks}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement x="270" y="71" width="70" height="10" uuid="fd23a822-a272-4157-aa3b-34fb31a183bb"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<text><![CDATA[SAILING DATE  ]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="270" y="83" width="70" height="10" uuid="b13b12d2-981a-4531-b797-38a7bc4f7925"/>
+								<textElement textAlignment="Left">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<text><![CDATA[TO]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="350" y="71" width="10" height="10" uuid="f273ccd3-95e6-427c-a8e4-ac49296708b3"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[:]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="350" y="84" width="10" height="10" uuid="a113638b-d5c1-47c9-836b-47d7fe0ae028"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[:]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement x="370" y="71" width="100" height="10" uuid="5c7ca81e-1df8-403c-bda3-a9e1672a159e"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($F{sailingDate})]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="370" y="84" width="100" height="10" uuid="390a373b-40ee-45a1-b91b-35b4ed86ae57"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{to}]]></textFieldExpression>
+							</textField>
+							<line>
+								<reportElement x="237" y="23" width="60" height="1" uuid="59720533-86c9-4707-ae23-b080fad69794"/>
+							</line>
+							<line>
+								<reportElement x="1" y="152" width="549" height="1" uuid="60dff2e0-a575-4782-94f2-160d94cf5b77"/>
+							</line>
+							<line>
+								<reportElement x="1" y="192" width="549" height="1" uuid="41813aaa-6177-475b-bef3-8d4e732ed2b0"/>
+							</line>
+							<line>
+								<reportElement x="2" y="171" width="548" height="1" uuid="d40b080a-b7be-49ad-907d-67d824fdea7a"/>
+							</line>
+							<line>
+								<reportElement x="1" y="153" width="1" height="40" uuid="f8206cf3-4d56-4388-86a9-5519bae7cc38"/>
+							</line>
+							<line>
+								<reportElement x="91" y="153" width="1" height="40" uuid="65dba1e2-182b-48cb-b578-d1a72f211704"/>
+							</line>
+							<line>
+								<reportElement x="549" y="153" width="1" height="40" uuid="68b41745-3f9d-4453-855c-3184ee7330db"/>
+							</line>
+							<line>
+								<reportElement x="211" y="153" width="1" height="40" uuid="67a397dd-382c-4309-a8fd-3ab0b3c83d9c"/>
+							</line>
+							<line>
+								<reportElement x="351" y="153" width="1" height="40" uuid="c0e0551c-fc3b-44a7-820e-d32f9f87094d"/>
+							</line>
+							<line>
+								<reportElement x="422" y="153" width="1" height="40" uuid="c97f17f4-c84e-4982-a3f2-bf8febaf2d53"/>
+							</line>
+							<staticText>
+								<reportElement x="6" y="152" width="84" height="19" uuid="f07af6b2-1420-4147-9106-14c535a9e9cd"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Make]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="98" y="153" width="114" height="19" uuid="a74c988b-da94-4ac6-a609-9a636a36f6f8"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Model]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="220" y="152" width="131" height="19" uuid="43fb88ef-cb3a-4079-8dea-5b9478c932a6"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Type]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="360" y="152" width="63" height="19" uuid="f8987909-ff5d-4b4e-949d-3b33590a0300"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ChassisNo]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="429" y="152" width="64" height="21" uuid="e2ac3bcd-1c8b-456d-93f5-faf28ed5c8a8"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Quantity]]></text>
+							</staticText>
+							<line>
+								<reportElement x="493" y="151" width="1" height="41" uuid="71281f24-97f3-46eb-9073-6ec0276142c5"/>
+							</line>
+							<staticText>
+								<reportElement x="500" y="152" width="50" height="21" uuid="14e86b30-a424-4f48-82e6-2f35028b0fbb"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Amount]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement x="1" y="172" width="90" height="20" uuid="0d94aac4-883b-4be3-8d20-a01061624ac2"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{maker}]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="91" y="172" width="120" height="21" uuid="9e483949-4671-41fc-abfc-36136efc6656"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{model}]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="211" y="171" width="140" height="22" uuid="87a60a1d-0ca0-45ec-b67e-764f55f56b7c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="351" y="171" width="72" height="22" uuid="14504eb2-ea2e-4e46-b0a1-a951cd70282b"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{chassisNo}]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="422" y="173" width="71" height="20" uuid="1047b378-e650-48e6-89ab-91c9aeeaa0db"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA["ONE (01)"]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="494" y="173" width="56" height="20" uuid="5b009dd4-4ee5-4e4d-8c0a-cbe93ac8c054"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0").format($F{stockAmount})]]></textFieldExpression>
+							</textField>
+							<line>
+								<reportElement x="1" y="201" width="549" height="1" uuid="42d89356-8c2d-4bd8-8bb7-f57e2f7990e2"/>
+							</line>
+							<line>
+								<reportElement x="1" y="221" width="548" height="1" uuid="c16c16a1-db77-4c2f-bd89-dab8555cf392"/>
+							</line>
+							<line>
+								<reportElement x="1" y="241" width="549" height="1" uuid="6cce2ea2-3b73-4cfa-8a5a-fe4dd33b19ea"/>
+							</line>
+							<line>
+								<reportElement x="1" y="201" width="1" height="41" uuid="abde4f89-6c92-41a5-87dc-f769e260aeb8"/>
+							</line>
+							<line>
+								<reportElement x="91" y="201" width="1" height="41" uuid="f5c99a9d-8ba1-4c4d-81dd-c73213bdd77f"/>
+							</line>
+							<line>
+								<reportElement x="549" y="201" width="1" height="39" uuid="812b86be-589c-49b3-85fc-9c573c997114"/>
+							</line>
+							<line>
+								<reportElement x="201" y="202" width="1" height="41" uuid="5f943007-9aee-4d37-99bc-53c06cd1ee3a"/>
+							</line>
+							<line>
+								<reportElement x="321" y="201" width="1" height="41" uuid="bb5df43d-15b0-4d52-a9f3-7f19f5d9158c"/>
+							</line>
+							<line>
+								<reportElement x="431" y="201" width="1" height="41" uuid="f4611ee6-ff24-4ce9-baf6-b2328d544d7a"/>
+							</line>
+							<staticText>
+								<reportElement x="3" y="202" width="88" height="19" uuid="5a57a015-a7d0-4ef4-88c9-8d33c980defc"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Fuel]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="92" y="202" width="109" height="19" uuid="22085328-bfae-4d2f-8f33-8816848cf78e"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Item]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="202" y="201" width="119" height="21" uuid="88d0e2c1-0c7f-4b20-a3f9-c9ff492d7d39"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Options]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="322" y="200" width="109" height="21" uuid="7c8a49e1-0254-452a-aea5-019127eda7f5"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[First Registration]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement x="1" y="221" width="90" height="20" uuid="2ce1c5eb-4a62-4841-9be1-cb75f0b09005"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{fuel}]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="91" y="221" width="110" height="20" uuid="4de413a7-cbea-4c85-bb94-d89ef3acec50"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA["USED VEHICLE"]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="201" y="221" width="120" height="20" uuid="4545dc3a-a79d-43d2-9264-097aa663fb96"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{equipment}]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="321" y="221" width="111" height="20" uuid="521377b8-4f53-42aa-96ad-d01dde72b548"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{sFirstRegDate}]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="432" y="221" width="118" height="20" uuid="49dc14f5-bf97-4209-ae4a-0471c4e528cb"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[""]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement x="432" y="201" width="117" height="21" uuid="36d192d2-acc7-4bb5-96b8-913254e943b4"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Year of Manufacture]]></text>
+							</staticText>
+							<line>
+								<reportElement x="0" y="260" width="549" height="1" uuid="41cc2aab-c6cc-4dfc-bce5-6af0844ab756"/>
+							</line>
+							<line>
+								<reportElement x="1" y="280" width="547" height="1" uuid="dd52c999-e2da-47dc-bc4c-ab819ee81fba"/>
+							</line>
+							<line>
+								<reportElement x="1" y="320" width="548" height="1" uuid="4a39cb00-f34f-4146-879f-d6a424b6ba9b"/>
+							</line>
+							<line>
+								<reportElement x="0" y="340" width="549" height="1" uuid="8a84ca57-203f-46f4-8293-e1c9c1ca818e"/>
+							</line>
+							<line>
+								<reportElement x="1" y="300" width="548" height="1" uuid="6c83f9c0-33d5-4cf5-828b-5503479befc9"/>
+							</line>
+							<line>
+								<reportElement x="0" y="360" width="549" height="1" uuid="8ce90070-a9e5-44a2-ba23-6fa9a4c830c7"/>
+							</line>
+							<line>
+								<reportElement x="0" y="261" width="1" height="100" uuid="2f59a51e-3654-470a-8958-e072167a906e"/>
+							</line>
+							<line>
+								<reportElement x="175" y="260" width="1" height="100" uuid="e86628ee-ae34-472b-a886-16fa9685c6a6"/>
+							</line>
+							<line>
+								<reportElement x="548" y="260" width="1" height="100" uuid="2201593e-a3a9-4d85-9fe1-a6b8c3cdf70d"/>
+							</line>
+							<staticText>
+								<reportElement x="1" y="261" width="174" height="19" uuid="742a7031-dd27-4064-9cbf-1332c636a4fe"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[Proforma Invoice No.]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="1" y="281" width="174" height="20" uuid="f568b88f-5782-4d0e-bcd6-b6f967153d18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[Proforma Invoice Date]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="1" y="301" width="174" height="18" uuid="0d46542a-f76d-41dd-94ad-185f3ffb2d18"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[Export Certificate No.]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="1" y="321" width="174" height="18" uuid="ea9c9fa5-d7d8-4150-89c0-9b147396b5ed"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[Inspection Certificate No.]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="1" y="342" width="174" height="18" uuid="7034aa59-34c0-444e-b55f-46c78c394491"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[Bank]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="1" y="245" width="275" height="10" uuid="4b7bd792-de4d-4abe-ad0a-b676a4ca865f"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[CERTIFYING THAT VEHICLE IS AS PER PROFORMA INVOICE NO]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement x="199" y="261" width="348" height="19" uuid="4d0997bf-0521-4583-8202-876df2b5bc2c"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{proformaInvoiceNo}]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="199" y="281" width="348" height="19" uuid="4d08438d-ff16-4397-988c-533dcd5d6ab0"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($F{proformaInvoiceDate})]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="199" y="301" width="350" height="19" uuid="1c78839f-f42e-4da2-948c-4fc13ae06a62"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{exportCertificateNo}]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="199" y="319" width="346" height="19" uuid="e456de01-faf6-498e-b291-3b997edad20a"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{inspectionCertificateNo}]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="199" y="340" width="347" height="22" uuid="118a4180-2325-4124-9a3d-4d21c0fc944f"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{bank}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement x="350" y="11" width="50" height="10" uuid="eedf6376-4029-4b5e-895f-630c550ff141"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<text><![CDATA[INVOICE NO]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="350" y="29" width="70" height="8" uuid="a8e98ed4-b26d-4d6d-b2b9-c0f509a8c07f"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<text><![CDATA[BILL OF EXCHANGE]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement positionType="Float" x="420" y="29" width="100" height="8" uuid="35c5abab-d032-4d1e-8922-b61ae2aaf4bf"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[":  "+$F{billOfExchangeNo}==null?"":$F{billOfExchangeNo}]]></textFieldExpression>
+							</textField>
+						</frame>
+						<frame>
+							<reportElement x="0" y="362" width="553" height="288" uuid="41e72714-9734-4787-91a8-2f539d0df2f4"/>
+							<line>
+								<reportElement x="1" y="2" width="549" height="1" uuid="a83f4cd8-485a-4ac9-b123-5aa89af6b3d6"/>
+							</line>
+							<staticText>
+								<reportElement x="0" y="3" width="175" height="20" uuid="7fab6ff8-2077-4d82-b108-a68f204b6f52"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[H.S. Code]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement x="198" y="2" width="352" height="21" uuid="66aa6397-85a2-4636-ad7e-6abdace6f152"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{hsCode}]]></textFieldExpression>
+							</textField>
+							<line>
+								<reportElement x="1" y="22" width="549" height="1" uuid="a1ce33d4-2ab0-4027-94b2-637feeb8428e"/>
+							</line>
+							<line>
+								<reportElement x="1" y="39" width="548" height="1" uuid="20970654-ce37-4a90-acc2-fb798903af96"/>
+							</line>
+							<line>
+								<reportElement x="1" y="57" width="549" height="1" uuid="3ef0d144-2b39-4feb-90a9-8e79b8d9a818"/>
+							</line>
+							<line>
+								<reportElement x="1" y="79" width="549" height="1" uuid="bbd0b2d3-0fa0-447e-bd59-ea008d679781"/>
+							</line>
+							<line>
+								<reportElement x="1" y="2" width="1" height="78" uuid="738fa506-8722-4fbd-ad66-af80bd11ac7f"/>
+							</line>
+							<line>
+								<reportElement x="549" y="2" width="1" height="78" uuid="308be62c-12d9-4492-92e5-6b0c2d36f3b8"/>
+							</line>
+							<line>
+								<reportElement x="175" y="3" width="1" height="76" uuid="67318bcf-f808-402d-b887-f7017f8bc508"/>
+							</line>
+							<staticText>
+								<reportElement x="1" y="40" width="174" height="18" uuid="f7681821-1f9f-4fa0-9593-0370c185e671"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[LC Issue Date]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="0" y="22" width="176" height="18" uuid="c188e82f-8235-4f3e-9d86-14a5d00d41a9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[LC No.
+]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement x="198" y="23" width="352" height="16" uuid="d29e9eed-ae6f-489d-b032-e108c521ea6f"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{lcNo}]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="198" y="40" width="352" height="17" uuid="0ad21c79-a479-4569-88e9-b01bbeacbaf1"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[new SimpleDateFormat("dd-MMM-yyyy").format($F{issueDate})]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="198" y="57" width="352" height="22" uuid="e2bcf03a-187f-40f2-a762-5a88a011ec47"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[new SimpleDateFormat("dd-MMM-yyyy").format($F{expiryDate})]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement x="7" y="79" width="142" height="15" uuid="c719d718-b0fe-4710-936a-6137389da293"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[F.O.B VALUE]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="7" y="94" width="142" height="15" uuid="fbaa93fc-8f35-454d-9114-c9bd007ce55e"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[FREIGHT]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="7" y="110" width="142" height="15" uuid="7a2e4dbe-16e9-45de-b30d-2bbaaf270e7b"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[INSURANCE]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="176" y="79" width="37" height="15" uuid="5ee792be-4e68-42a8-9b4a-d8bf968301c3"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[JPY]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="176" y="94" width="37" height="15" uuid="68c2b899-1f30-4bc6-b0f0-f689a184fd56"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[JPY]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="176" y="109" width="37" height="15" uuid="4f49e5e4-7abf-40ae-a9d8-3c30d9996785"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[JPY]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement x="276" y="79" width="100" height="15" uuid="8cc6a6fb-275e-4c6f-b1a3-fe8fcb7d6709"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0").format($F{fob})]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="276" y="94" width="100" height="15" uuid="164f8d17-8f0e-47da-9392-b4a97310247c"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0").format($F{freight})]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="276" y="109" width="100" height="15" uuid="7dff949d-4b60-4707-804d-3ba18b59446c"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0").format($F{insurance})]]></textFieldExpression>
+							</textField>
+							<line>
+								<reportElement x="7" y="123" width="369" height="1" uuid="4926d018-af8d-4fae-914d-c79f462728f4"/>
+							</line>
+							<line>
+								<reportElement x="7" y="137" width="369" height="1" uuid="67918b87-98f3-40e7-ab5e-6ab325f79d95"/>
+							</line>
+							<staticText>
+								<reportElement x="7" y="123" width="142" height="15" uuid="82448e44-e2dd-4927-91ab-511446660704"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[TOTAL]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="176" y="125" width="37" height="15" uuid="6f7a6894-a5d1-48cd-9324-a6045467f437"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[JPY]]></text>
+							</staticText>
+							<textField isBlankWhenNull="true">
+								<reportElement x="276" y="124" width="100" height="15" uuid="9d801988-86c5-410a-92ee-b972cbcd29f4"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0").format($F{total})]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement x="6" y="146" width="100" height="13" uuid="6071280e-dd94-4731-8647-1a82eba18d02"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[BENEFICIARY CERTIFY]]></text>
+							</staticText>
+							<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+								<reportElement x="7" y="160" width="542" height="10" uuid="3d506a70-dcfb-4e72-9f24-fad613e1d03d"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="7"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{beneficiaryCertify}]]></textFieldExpression>
+							</textField>
+							<textField isBlankWhenNull="true">
+								<reportElement x="6" y="180" width="540" height="40" uuid="19fddbaa-3ce6-4039-bc87-c452862f944c"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="6.5"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{licenseDoc}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement x="421" y="220" width="122" height="18" uuid="faac89e5-ebb7-4e04-9630-de460d9fb23e"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="12"/>
+								</textElement>
+								<text><![CDATA[AA JAPAN(PVT) LTD]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="9" y="270" width="202" height="18" uuid="d355877f-527d-4493-9655-14beb0eea047"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[We Certify Origin of Goods / JAPAN]]></text>
+							</staticText>
+							<staticText>
+								<reportElement x="427" y="270" width="122" height="18" uuid="2aab9f3e-75cd-4cc9-bf90-bfad79baa283"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[Export Manager]]></text>
+							</staticText>
+							<line>
+								<reportElement x="2" y="-357" width="548" height="1" uuid="d71d7db2-a3c4-4cee-a418-4f42e0ccc001"/>
+							</line>
+							<staticText>
+								<reportElement x="0" y="57" width="174" height="22" uuid="b42c1c14-f0a6-47e9-8d73-803c7b55fd3a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<text><![CDATA[LC Expiry Date]]></text>
+							</staticText>
+						</frame>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

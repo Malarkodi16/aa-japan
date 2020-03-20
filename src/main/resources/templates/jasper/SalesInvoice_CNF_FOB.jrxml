@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ProformaInvoice_CNF_FOB" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="057bdce8-33e2-45a7-a2d4-cbc4c7948a1c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="detailsDataset" uuid="0d92f9c2-3e71-40c2-b37f-9d7cc4c7308a">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="chassisNo" class="java.lang.String"/>
+		<field name="stockNo" class="java.lang.String"/>
+		<field name="maker" class="java.lang.String"/>
+		<field name="model" class="java.lang.String"/>
+		<field name="transmission" class="java.lang.String"/>
+		<field name="fuel" class="java.lang.String"/>
+		<field name="driven" class="java.lang.String"/>
+		<field name="cc" class="java.lang.Double"/>
+		<field name="type" class="java.lang.String"/>
+		<field name="firstRegDate" class="java.util.Date"/>
+		<field name="fob" class="java.lang.Long"/>
+		<field name="total" class="java.lang.Long"/>
+		<field name="currencySymbol" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="logo" class="java.awt.image.BufferedImage"/>
+	<parameter name="detailsDataset" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="summary" class="com.nexware.aajapan.dto.TSalesInvoiceDto"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="83" splitType="Stretch">
+			<image hAlign="Center">
+				<reportElement x="4" y="5" width="100" height="65" uuid="bfae6873-e421-4b63-8305-fe39b9bc3ad0"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement x="204" y="0" width="344" height="70" uuid="369d242f-7ef1-495f-ae89-188f32294e06">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+				</reportElement>
+				<staticText>
+					<reportElement x="63" y="1" width="281" height="25" uuid="b10494d8-a59a-40de-bbbf-fb102d4a21a0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="18.5" isBold="true"/>
+					</textElement>
+					<text><![CDATA[AA JAPAN (PVT) LTD
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="63" y="26" width="281" height="44" uuid="dfaa511a-ee5c-4b4a-92e7-942e2a88c549"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="8.1"/>
+						<paragraph lineSpacing="1_1_2" lineSpacingSize="1.0"/>
+					</textElement>
+					<text><![CDATA[Darus Salam Bldg., 1-28-21 HayabuchiI, Tsuzuki-Ku, Yokohama-Shi
+Kanagawa-Ken, 224-0025 - , Japan
+Tel: +(81) 45-594-0507, Fax: +(81) 45-594-0508, Mob: +81 80-1094-0907
+Web: www.aajapancars.com, EMail: info@aajapancars.com]]></text>
+				</staticText>
+			</frame>
+			<line>
+				<reportElement x="0" y="76" width="555" height="1" uuid="54f7ffac-a9db-497e-8579-b284d8796a2f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="334" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="20" uuid="12d33ae4-71e6-402d-a60e-8b187ee8ca1b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="10.5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALES INVOICE
+]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="0" y="270" width="555" height="64" uuid="22bd04e5-db2c-41b4-b9fd-9e8ead06fdb3">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="Blank">
+					<datasetRun subDataset="detailsDataset" uuid="672630e0-995d-44d2-9aed-0ba29f7407dd">
+						<dataSourceExpression><![CDATA[$P{detailsDataset}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="40" uuid="2daf0f30-aa3e-4374-89fb-0d3a375cfe75">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="40" height="30" uuid="2fae765a-bf84-4724-858b-dd96db9f6bd7"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="11" isBold="true"/>
+								</textElement>
+								<text><![CDATA[S.No.]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="40" height="30" uuid="0a2d39cd-82c8-42d0-bc74-7b61bd2db796"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="315" uuid="50995af3-ba68-4da7-ae5a-6eeed1d90b3b">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="315" height="30" uuid="a3e9c946-f562-46c4-b0b1-8dfdf3471006"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="11" isBold="true"/>
+								</textElement>
+								<text><![CDATA[DETAILS]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="315" height="30" uuid="bcc58b2e-59eb-408b-845d-81e59d6d6482"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="10" isBold="false"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{stockNo}+","+$F{chassisNo}+","+$F{maker}+","+$F{model}+","+$F{transmission}+","+$F{fuel}+","+$F{driven}+","+$F{cc}+","+$F{type}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="6fc391ed-00bf-4b60-a9a3-44190213d353">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="30" uuid="af7b5552-91c3-4f6d-8572-63c574faf24a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="11" isBold="true"/>
+								</textElement>
+								<text><![CDATA[YEAR]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="30" uuid="efdc00b7-2d87-4c51-9619-b36895209e24"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[new SimpleDateFormat("MM-yyyy").format($F{firstRegDate})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="70188dd2-485e-41d8-ae06-44e699d86b23">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="30" uuid="a284811c-2424-462e-afe9-b44770d510fc"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="11" isBold="true"/>
+								</textElement>
+								<text><![CDATA[UNIT]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="30" uuid="0fa86116-48a2-4212-b756-be12591a1b59"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[1]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="2c15f6b7-ea73-41f8-b111-fdf5efecf34b">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="70273e54-e4af-4e38-899d-c4525267c3be"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO" size="11" isBold="true"/>
+								</textElement>
+								<text><![CDATA[AMOUNT]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="80" height="30" uuid="e705e39e-221a-426c-aa03-07dc73feca62"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="MSMINCHO"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{total}==null?$F{currencySymbol}+" "+0:$F{currencySymbol}+" "+new java.text.DecimalFormat("#,##0").format($F{total})]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="19" width="555" height="111" backcolor="#DBDBDB" uuid="f39e002f-03ec-477a-9b83-d2b6feeea536"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineColor="#FA0702"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#FA0702"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#FA0702"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<frame>
+					<reportElement x="401" y="9" width="152" height="50" uuid="eeff56d9-bea5-4062-af34-408c4fc2dda2"/>
+					<line>
+						<reportElement x="8" y="15" width="138" height="1" uuid="4b630acd-d91f-43a2-b95c-042e69837a18"/>
+					</line>
+					<line>
+						<reportElement x="8" y="30" width="138" height="1" uuid="edb57252-103c-4e6c-8d40-ae4a236b2961"/>
+					</line>
+					<line>
+						<reportElement x="8" y="46" width="138" height="1" uuid="f044cabc-e17e-4a54-9a2b-c47b133bdfc8"/>
+					</line>
+					<staticText>
+						<reportElement x="12" y="16" width="58" height="15" uuid="dcae4674-2c9a-40a7-baee-737232d304ef"/>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="MSMINCHO" size="7.95" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Issue Date  :]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="12" y="0" width="58" height="16" uuid="502b72f4-56ed-4a8c-9902-e613da6a7f77"/>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="MSMINCHO" size="7.95" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Invoice No  :]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="70" y="0" width="72" height="16" uuid="6cbb1627-3c0d-4198-8ec9-386315f521f6"/>
+						<textElement textAlignment="Right" verticalAlignment="Middle">
+							<font fontName="MSMINCHO" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{summary}.getInvoiceNo()]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement x="12" y="31" width="58" height="15" uuid="ffedc306-cba3-4335-b37c-126f2cdbb992"/>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="MSMINCHO" size="7.95" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Expiry Date :]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="70" y="15" width="72" height="16" uuid="dafc3b35-1927-4770-b359-566f6e84b42b"/>
+						<textElement textAlignment="Right" verticalAlignment="Middle">
+							<font fontName="MSMINCHO" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[new SimpleDateFormat("dd-MM-yyyy").format($P{summary}.getCreatedDate())]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="70" y="30" width="72" height="16" uuid="eea04776-0a53-4f6f-b349-e424fe590ac7"/>
+						<textElement textAlignment="Right" verticalAlignment="Middle">
+							<font fontName="MSMINCHO" size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[new SimpleDateFormat("dd-MM-yyyy").format($P{summary}.getExpiryDate())]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="6" y="7" width="200" height="94" uuid="51be0e83-0b67-436c-a4e9-73be2cd29de1">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<staticText>
+						<reportElement x="6" y="0" width="174" height="17" uuid="e55a6177-d8b1-42df-bd37-1f63a73d0557"/>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="MSMINCHO" size="9" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Consignee Details]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="60" y="74" width="20" height="15" uuid="227c68ee-f132-4709-a0a2-697fc92b192b"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="MSMINCHO" size="9" isBold="false"/>
+						</textElement>
+						<text><![CDATA[Tel:]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="6" y="17" width="174" height="17" uuid="0ff07014-bd46-4c42-a024-e2466f7acfc5"/>
+						<textElement textAlignment="Left">
+							<font fontName="MSMINCHO" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{summary}.getcFirstName()]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="6" y="35" width="174" height="39" uuid="ad362899-fc3e-47d9-b920-f66376751260"/>
+						<textElement textAlignment="Left">
+							<font fontName="MSMINCHO" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{summary}.getcAddress()]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="80" y="74" width="80" height="15" uuid="d3dcc3b0-10fe-45dc-a6d8-634a8756ebc3"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="MSMINCHO" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{summary}.getcMobileNo()]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement mode="Transparent" x="206" y="8" width="189" height="94" backcolor="#FFFFFF" uuid="1f5a326c-a693-4f0e-8c77-5a24fdef8e91">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<staticText>
+						<reportElement x="10" y="0" width="162" height="17" uuid="6b9ea5a9-1cf8-4822-8b4e-63c4ca41a560"/>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="MSMINCHO" size="9" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Notify Party Details
+]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="49" y="72" width="18" height="16" uuid="1cf08f1d-aeca-4ab8-945d-18e269f4d2e9"/>
+						<textElement textAlignment="Left" verticalAlignment="Middle">
+							<font fontName="MSMINCHO" size="9" isBold="false"/>
+						</textElement>
+						<text><![CDATA[Tel:]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement x="10" y="17" width="162" height="17" uuid="2da2c5a3-2f04-47b5-a21a-b9e4130e9305"/>
+						<textElement textAlignment="Left">
+							<font fontName="MSMINCHO" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{summary}.getNpFirstName() == null ? "SAME AS CONSIGNEE" : $P{summary}.getNpFirstName()]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement x="10" y="34" width="162" height="38" uuid="6b0567b4-b9f6-44c7-a583-1058d31f04bb"/>
+						<textElement textAlignment="Left">
+							<font fontName="MSMINCHO" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{summary}.getNpAddress()]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement x="67" y="72" width="100" height="16" uuid="61d74759-6b07-4e56-9d02-e0e38e055e94"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="MSMINCHO" size="9"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{summary}.getNpMobileNo()]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement x="2" y="148" width="187" height="17" uuid="ca59e20a-0f4e-417d-a1ad-6f1a71a84534"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="11" y="1" width="93" height="16" uuid="a1b68f75-a421-4dbb-ae79-a9eef2f85631"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[From :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="104" y="0" width="78" height="17" uuid="a4915bbf-9900-48e8-87b6-3c559048d3f9"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="9" isBold="false"/>
+					</textElement>
+					<text><![CDATA[JAPAN]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="218" y="149" width="325" height="20" uuid="08006e86-e1b1-43c4-bc21-2f085867cfcc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="9"/>
+				</textElement>
+				<text><![CDATA[Shipping process will start as soon as full payment is received. The vehicle(s) will be shipped on the earliest available vessel.]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="2" y="165" width="187" height="17" uuid="d9e856da-045f-419c-99df-45e2a328095a"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="11" y="1" width="37" height="17" uuid="38cd8635-5451-4202-8c1d-333a044e8645"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[To   :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="48" y="1" width="134" height="16" uuid="9d7401a8-9399-4ff0-964a-4abfd19fbc2b"/>
+					<textElement textAlignment="Right">
+						<font fontName="MSMINCHO" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{summary}.getPort() +"( "+ $P{summary}.getCountry() + " )"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="2" y="182" width="187" height="17" uuid="058569dd-7ece-4058-925e-08edb877ef57"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement x="11" y="0" width="93" height="17" uuid="b4de0887-2308-4a56-a3fb-74d3ecaf5cc4"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Final Destination:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="105" y="1" width="78" height="16" uuid="377afdd8-d315-4d95-b99f-fdeb9c1796d5"/>
+					<textElement textAlignment="Right">
+						<font fontName="MSMINCHO" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{summary}.getPort()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement x="1" y="229" width="555" height="10" uuid="793442d3-d246-436c-af5b-05f30c01aec0"/>
+				<textElement>
+					<font fontName="MSMINCHO"/>
+				</textElement>
+				<text><![CDATA[Once the vessel sails all documents will be sent via courier. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="214" width="100" height="11" uuid="729373f6-554d-42d1-8de8-7568bab34686"/>
+				<textElement>
+					<font fontName="MSMINCHO" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Documents]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="244" width="555" height="11" uuid="d0b82db5-9909-4b2d-8611-12cb65fff639"/>
+				<textElement>
+					<font fontName="MSMINCHO" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Used Vehicle Details
+]]></text>
+			</staticText>
+		</band>
+		<band height="105">
+			<staticText>
+				<reportElement x="362" y="1" width="105" height="18" uuid="2318216c-ff1b-4a94-9b51-7b66ba8db16e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="467" y="1" width="86" height="17" uuid="bc2aed89-bfe3-4572-b23d-4ea00dc46065"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="8.95" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{summary}.getAllTtotal()==null?$P{summary}.getCurrencySymbol()+" "+0:$P{summary}.getCurrencySymbol()+" "+new java.text.DecimalFormat("#,##0").format($P{summary}.getAllTtotal())]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="362" y="17" width="193" height="1" uuid="63b569c7-aa85-4749-ba76-fe2acc79b40e">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="362" y="1" width="193" height="1" uuid="77e734d3-afad-456e-beaf-891c37e5838d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+		<band height="216">
+			<frame>
+				<reportElement x="0" y="2" width="555" height="214" uuid="3f108e3f-fa0e-4fa5-81f9-063550ed9b0d"/>
+				<frame>
+					<reportElement x="0" y="27" width="270" height="100" uuid="22cf1799-55dd-47b8-8666-5c0bb3caeeef"/>
+					<staticText>
+						<reportElement x="0" y="0" width="270" height="10" uuid="68f1dc00-fcd0-4839-bb1f-631525511767"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true" isUnderline="true"/>
+						</textElement>
+						<text><![CDATA[US DOLLAR ( $ ) ACCOUNT DETAILS]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="20" width="79" height="10" uuid="98504374-9576-4965-ac27-212d5829d329"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Account Name:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="30" width="30" height="10" uuid="c342f7f3-124b-4a73-826c-32b2363e200b"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Name:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="40" width="40" height="10" uuid="8cd26522-6cfb-4b95-8022-5fbbb61fde2a"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Branch:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="50" width="50" height="10" uuid="a53d70ba-5f96-422b-a108-d6df3b1ccfab"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Address:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="60" width="69" height="10" uuid="49a4b01d-946f-4878-9725-db2fba91403b"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[City-State:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="70" width="69" height="10" uuid="86b3d8c1-2a5b-4bdb-8a80-029fe699edde"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Swift code:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="80" width="79" height="10" uuid="2a3d8622-8842-41b0-9392-7f46fef6f639"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Branch Number: ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="90" width="69" height="10" uuid="1c38e954-a563-465f-992b-299e40bf6032"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Account No.:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="79" y="20" width="190" height="10" uuid="51d21b8a-c7b4-4a67-8763-05f9d7db01ee"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[AL AIN JAPAN (PVT) LTD]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="40" y="30" width="229" height="10" uuid="d07ad1a1-525f-40c0-9cdd-4b4eb4e82865"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="false"/>
+						</textElement>
+						<text><![CDATA[MITSUBISHI TOKYO UFJ BANK]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="40" y="40" width="230" height="10" uuid="0200cad7-4d2c-4785-9095-c0034d99a330"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="false"/>
+						</textElement>
+						<text><![CDATA[SHIN-YOKOHAMA]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="50" y="50" width="220" height="10" uuid="9edc0b6f-272e-4729-99ac-f5e59e1aa054"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="false"/>
+						</textElement>
+						<text><![CDATA[ 222-0033, KOUHOKU-KU, SHIN-YOKOHAMA]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="69" y="60" width="201" height="10" uuid="46411e47-82ce-4518-b4fd-6b915ad0732a"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="false"/>
+						</textElement>
+						<text><![CDATA[ KANAGAWA-KEN, YOKOHAMA-SHI, JAPAN]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="79" y="70" width="191" height="10" uuid="4d0c4f58-5c8b-4092-a0aa-a112914d2a4e"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="false"/>
+						</textElement>
+						<text><![CDATA[BOTKJPJT]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="79" y="80" width="191" height="10" uuid="472a63bc-74b8-43bf-adfe-546b8dba1d1a"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="false"/>
+						</textElement>
+						<text><![CDATA[215]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="69" y="89" width="201" height="10" uuid="836ad38e-0117-4d77-8cfb-280ade42ed30"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="false"/>
+						</textElement>
+						<text><![CDATA[0022565]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement x="285" y="26" width="270" height="100" uuid="43a221d1-8152-4159-bb16-2eeb934eab93"/>
+					<staticText>
+						<reportElement x="0" y="0" width="270" height="10" uuid="7eedc541-8bbe-4e0e-9525-b56dafe0af84"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true" isUnderline="true"/>
+						</textElement>
+						<text><![CDATA[JAPANESE YEN ( ¥ ) ACCOUNT DETAILS
+]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="20" width="79" height="10" uuid="ea40266c-4077-4f61-a762-08ce5c739042"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Account Name:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="30" width="30" height="10" uuid="f466b21a-cf66-4f67-b276-37411ce3059e"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Name:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="40" width="40" height="10" uuid="3e94d355-acd3-42c6-831a-05aefc91d6f8"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Branch:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="50" width="50" height="10" uuid="ed8a775f-756c-4df8-90eb-529d4e984468"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Address:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="60" width="74" height="10" uuid="e8ae2223-c842-4811-8624-7fece1884d65"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[City-State:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="70" width="68" height="10" uuid="ea544242-c592-4c5e-967a-ba295a17e871"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Swift code:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="80" width="79" height="10" uuid="b4d55f3a-c4a7-4438-b509-15f544f1f07c"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Branch Number: ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="90" width="69" height="10" uuid="6f63a76b-d343-4acd-bca9-9baf7d334317"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Account No.:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="79" y="20" width="190" height="10" uuid="3b3d9dea-3270-4f97-9e5f-5a8fe5f888a2"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="true"/>
+						</textElement>
+						<text><![CDATA[AL AIN JAPAN (PVT) LTD]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="40" y="30" width="229" height="10" uuid="c44bc98b-bca9-4d4b-9a38-7057f69d9528"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="false"/>
+						</textElement>
+						<text><![CDATA[MITSUBISHI TOKYO UFJ BANK]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="40" y="40" width="230" height="10" uuid="13fc33e0-bafc-4263-b54d-2d4aa77f0b0c"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="false"/>
+						</textElement>
+						<text><![CDATA[SHIN-YOKOHAMA]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="50" y="50" width="220" height="10" uuid="bd1347db-8217-4d29-a2a4-28a320fbbdca"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="false"/>
+						</textElement>
+						<text><![CDATA[ 222-0033, KOUHOKU-KU, SHIN-YOKOHAMA]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="79" y="60" width="190" height="10" uuid="c34e478d-0fbf-456d-9111-263b67380eb7"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="false"/>
+						</textElement>
+						<text><![CDATA[ KANAGAWA-KEN, YOKOHAMA-SHI, JAPAN]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="69" y="70" width="200" height="10" uuid="282a4329-2fc0-43cf-a576-50322742ce82"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="false"/>
+						</textElement>
+						<text><![CDATA[BOTKJPJT]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="79" y="80" width="191" height="10" uuid="c89415aa-2063-48d5-ba39-a19ce3f902c5"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="false"/>
+						</textElement>
+						<text><![CDATA[215]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="69" y="89" width="201" height="10" uuid="21831d4b-1c03-4083-ab7c-fd057b325f10"/>
+						<textElement>
+							<font fontName="MSMINCHO" isBold="false"/>
+						</textElement>
+						<text><![CDATA[0313247]]></text>
+					</staticText>
+				</frame>
+				<staticText>
+					<reportElement x="0" y="10" width="555" height="10" uuid="c67cf9d3-eb63-491d-9cc0-17ca0275861b"/>
+					<textElement>
+						<font fontName="MSMINCHO" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Payment Method: Telegraphic Transfer (T/T)
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="145" width="555" height="10" uuid="d46973ae-6b73-447e-b978-fb8d431ba590"/>
+					<textElement>
+						<font fontName="MSMINCHO" isBold="true" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[ORIGIN OF GOODS/JAPAN
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="161" width="555" height="10" uuid="ffc13c3e-4856-4b5b-837a-5f2d82637958"/>
+					<textElement>
+						<font fontName="MSMINCHO" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Al Ain Japan (Pvt) Ltd]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="202" width="555" height="10" uuid="a336df79-3c93-4fcf-9c5e-30534c98e06d"/>
+					<textElement>
+						<font fontName="MSMINCHO" isBold="true"/>
+					</textElement>
+					<text><![CDATA[EXPORT MANAGER
+]]></text>
+				</staticText>
+			</frame>
+		</band>
+		<band height="657">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="14" uuid="a6899af6-c8c5-419b-a996-5c3085c5b810"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Terms & Conditions ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="14" width="555" height="106" uuid="31646096-a0cf-4870-8c03-a7c7f771bdae"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="MSMINCHO" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[By using this site www.alainjapan.com and our services we take for granted that you have read, understood, and agree to respect and follow these terms and all applicable laws and regulations. If you do not agree to these terms please do not use this site. Any claim relating to the use of this site arising from the use of or orders made on the site should be notified to the owners immediately. Al Ain Japan has copyrights and have firm Legal Rights and Privacy Policy as explained hereby.
+
+Al AIN Japan (PVT) LTD International hold personal stocks, for sale of used vehicles. Sometimes we are acting (partially) as a middle-person between the auction companies of Japan and customers. We advise and assist in getting the right vehicle for you from Japan. We are not responsible for any requests that are misunderstood considering any vehicle shown on our database as our stock unless specified otherwise. However through our Newsletter and E-mails there will be advertisements of some vehicles, which are exchanged directly from End-users and available for sale. An invoice copy of purchase made on customer's behalf is a supporting document for principles of trust and open information exchange. All the purchasing on behalf of customers are initiated after confirmation of orders by the customers followed by token money .Token money can be easily transferred online using *PayPal & major credit cards. See Online Payments.
+
+*We accept responsibility by will to arrange exports and all related process in sending vehicles out of Japan. But, we are however not responsible of other party's local import rules if some or all vehicles are refused to enter in their requested country. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="121" width="555" height="14" uuid="b4205aae-c1b6-4245-a50a-6e35ca9e134d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Standards / Laws of Importing Countries ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="136" width="555" height="14" uuid="fa4fc457-d153-48f2-9563-d29e405c4b27"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="MSMINCHO" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Customer will be responsible to confirm the import law and customs duties with the authorities in your country before you make a purchase from us.Al Ain Japan (PVT) LTD will not be responsible for any claim related with such rules. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="152" width="555" height="8" uuid="d3f70c34-0954-46b3-ae87-fe3d37ae682c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Confidentiality 
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="162" width="555" height="14" uuid="440e290f-a01d-4314-b208-1b0d9af255c3"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="MSMINCHO" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Customer particulars, Invoice Details, Transactions with us are kept strictly confidential. Please see our Use of Acceptance policy.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="184" width="555" height="8" uuid="e1704a3d-890e-4aa4-92f3-fb8e7a0ac1ba"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vehicle Inspection ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="196" width="555" height="80" uuid="e2c8dd48-eb4f-4780-9431-7af798ea6813"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="MSMINCHO" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Private vehicle inspection is charged minimum US $ 150 per vehicle.
+JAAI and JEVIC inspection charge will NOT be included in the FOB price.
+If the costumer asks for any reparation of the vehicle we will charge the full cost it.
+If Al Ain-Japan (PVT) Ltd has to re-channel the transportation between stockyards, in order to provide certain services and full photo session. In
+such cases onward local transportation to port of discharge will also be included in the FOB price.
+B. The Seller shall not be liable for;
+1. Interior damages that are judged as minor and non-need of mention or invisible (including without limitation scratches, cigar burns, stain and cuts);
+2. Missing or damaged interior equipments (including without limitation shift knobs, head rests, sun shades, spare tires and remote controls);
+3. Damages that are judged as minor and non-need of mention or invisible (including without limitation scratches, tiny dents, holes and small rust);
+4. Snow tires after market AW not mentioned or wheel lock nut missing (any consumable parts such as oil, tires, AC gas, etc). ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="282" width="555" height="8" uuid="b83d439d-db0f-4ce3-b368-43fe43f1e991"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Condition of Payment ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="291" width="555" height="58" uuid="4b402f5a-b3b4-4c2b-8ab5-d1ab57cb63a2"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="MSMINCHO" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1. 100% Payments are required (Bank Confirmation), before we board a vehicle on a ship.
+2. We accept T/T (Telegraphic Transfer) or Cash (From visiting customers and in our official agencies). We also accept advance & guarantee via
+*PayPal online
+3. We initiate process of Buying and/or shipping once we receive money guarantees from the customers.
+4. L/C (Letter of Credit) or Bank/Crossed Check is not accepted. (*L/C for Sri Lanka can be applied)
+5. We accept payment in all recognized international currencies.
+6. Bank-Charges/Commissions are charged to customers.
+PayPal online payments can be terminated any time without any prior notice as per PayPal rules and regulations. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="354" width="555" height="8" uuid="d09879a0-294a-4ea4-b4f6-d34a60dff1c9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FOB Japan charges included: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="365" width="555" height="44" uuid="92656162-b831-453a-bc65-506d3bcb3958"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="MSMINCHO" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1. All service charges
+2. All separate surcharges
+3. All auction negotiation fees
+4. All inland transportation.
+5. All Forwarding cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="408" width="555" height="8" uuid="050833e3-c0a2-40b8-b6cd-d1d9dac4f23c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Shipment and Insurance Conditions 
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="417" width="555" height="92" uuid="e8da8149-29f9-4686-b31e-1d5def95e8f9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="MSMINCHO" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1. Shipping is done by the first available ship after we received the payment confirmation from our bank.
+2. All documents: (Export-Certificate, Translation of the Export Certificate, Invoice and BILL OF LADING (two originals and 1 copy) are sent by
+EMS couriers within one week after shipment (Delays in B/L might occur for amendments and corrections upon B/L).
+3. Freight charges are based on:
+	A. Volume / Weight of Vehicle (M3 rates apply).
+	B. Destination Port and Currency Exchange rates.
+	C. If You Opt for Container, then Charges are calculated per Container basis [Exact freight charges shall be calculated at the time of shipment].
+4. Insurance coverage is included in the quoted "Ocean Charge". Insurance coverage is for total loss, disasters or acts of God and damages clearly due
+to negligence of the carrier.
+5. Cars are not locked in roll-on and roll-off cases. Therefore insurance will not cover risk of petty thefts.
+6. We will not bear responsibility for financial loss or damage caused by shipping delays as we have no control over shipping schedules, bad weather,
+heavy traffic, overbooking, acts of war & terror and/or their prevention, etc.
+7. Upon your request, we can arrange an extra insurance. The cost of an extra insurance are charged to customers ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="516" width="555" height="8" uuid="30edc976-086d-47ae-93da-64b1e59f3cd0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Advance Deposit Policy 
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="525" width="555" height="44" uuid="ae005e8d-d30c-406b-aa1f-e9fdb0c6fc2d"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="MSMINCHO" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Token money or Advance deposit from customers is considered as an initial agreement to make purchase through Al Ain Japan (PVT) Ltd auctions. If
+customers do change their mind to withdraw from a bid or cancel from an order or shift to another supplier after an agreement between two parties is
+made must obey the following rules:
+* Al Ain Japan (Pvt) Ltd International will only reimburse to the Bank accounts of the senders from whom the advance is deposited. We do not risk
+our reputation as a money launderer.
+* Unable to deliver accepted order within specified time, Al Ain Japan (Pvt) Ltd will refund the advance deposit less the bank transfer charges. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="574" width="555" height="8" uuid="1922d69c-550e-4496-8d15-625377c7d70a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Order Cancelation policy
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="583" width="555" height="36" uuid="66d4c806-7575-44cf-8600-c59a81579937"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="MSMINCHO" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1. After a successful purchase on your behalf, refusal to accept the vehicle is fined according to following.
+2. JPY 300,000 Minimum or (Whichever greater) per vehicle.
+3. Unconfirmed payments [by our authorized bank(s) in Japan] in specified time as laid in these terms might result in order cancellation and all the
+losses are to be charged from the customer.]]></text>
+			</staticText>
+		</band>
+		<band height="47">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="8" uuid="b8bbe9ce-dba6-4901-a390-b837482215b5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Warranty and After Sales ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="11" width="555" height="36" uuid="ae7f1639-6d55-4627-9444-b0547c7e78a8"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="MSMINCHO" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Vehicles are sold in "as-it-is condition" as used commodity. Al Ain Japan (PVT) LTD. International cannot provide warranty for any vehicle gone outside Japan.
+*In cases where we load the parts in separate cargo (e.g. DHL, EMS, OCS) we would be charging the total cost of the deliver. 
+*if a vehicle is re-shipped back it back to Japan we will refund the funds deducting the freight charges and forwarding charges. 
+N.B: Al Ain Japan (PVT) LTD reserves the right to revise the terms and conditions at any time. You should therefore periodically visit our website to determine then current Terms & Conditions to which you are bound. ]]></text>
+			</staticText>
+		</band>
+		<band height="50">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="15" uuid="0f5b5ff1-73dc-4817-9b04-89e2fa4c8789"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[INTERNATIONAL EXPORT DIVISION ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="16" width="100" height="15" uuid="d19aadd6-16d5-43dd-9f76-61ebacb54ff1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="MSMINCHO" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AZAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="32" width="555" height="15" uuid="fb263998-7fc6-4da4-b484-ee756c0de37f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="MSMINCHO" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Al Ain Japan (Pvt) Ltd. ]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="59" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="db5c5936-36f2-49b4-99b0-bbd7cef99a96">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<frame>
+				<reportElement x="0" y="0" width="555" height="59" uuid="55aca28d-5bd3-4ecf-9a2c-d1e7b3e26254"/>
+				<staticText>
+					<reportElement x="0" y="10" width="555" height="10" uuid="7088ecb2-2b4f-439e-bdd3-8fd997a9f816"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Please email or fax a copy of your payment receipt (Details above) ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="21" width="555" height="10" uuid="25651969-47cb-44a4-803b-1000d6c744bc"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Please include the Proforma Invoice Number in your payment details]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="33" width="555" height="26" uuid="39f8e433-5e5e-4678-b677-27e2f6a3db31"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="MSMINCHO" isBold="true" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[All bank transfer fees and charges should be paid by the customer
+Correspondent charges to be paid by applicant]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- Base Definition -->
+	<definition name="accounts.master.base-definition"
+		template="/WEB-INF/views/accounts/layout/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/layout/acc_header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/accounts/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/layout/footer.jsp" />
+		<put-list-attribute name="stylesheets">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/css/dataTables.bootstrap.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/js/jquery.dataTables.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/js/dataTables.bootstrap.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Master Bank List -->
+	<definition name="accounts.master.masterbank.list"
+		extends="accounts.master.base-definition">
+		<put-attribute name="title" value="Bank List" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/master/master-bank-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/master/bank-list.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Master Bank Create -->
+	<definition name="accounts.master.masterbank.create"
+		extends="accounts.master.base-definition">
+		<put-attribute name="title" value="Create Bank" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/master/master-bank-create.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/accounts/master-bank-create-validation.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/master/bank-create.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Added by Yogeshwar -->
+
+	<!-- Master Bank Foreign Create -->
+
+	<definition name="accounts.master.masterforeignbank.create"
+		extends="accounts.master.base-definition">
+		<put-attribute name="title" value="Create Bank" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/master/master-foreign-bank-create.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/accounts/master-foreign-bank-create-validation.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/master/bank-foreign-create.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Master Foreign Bank List -->
+	<definition name="accounts.master.masterforeignbank.list"
+		extends="accounts.master.base-definition">
+		<put-attribute name="title" value="Bank List" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/master/master-foreign-bank-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/accounts/master-foreign-bank-create-validation.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/master/foreign-bank-list.js" />
+		</put-list-attribute>
+	</definition>
+	<!-- Added by Yogeshwar -->
+
+	<!-- Master Shipping Charge Create -->
+	<definition name="accounts.master.shippingcharge.create"
+		extends="accounts.master.base-definition">
+		<put-attribute name="title"
+			value="Shipping Charge Create" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/master/shipping_charge.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/master/ship-charge-create.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Master Shipping Charge List -->
+	<definition name="accounts.master.shippingcharge.list"
+		extends="accounts.master.base-definition">
+		<put-attribute name="title" value="Shipping Charge List" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/master/shipping_charge_list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/master/ship-charge-list.js" />
+
+		</put-list-attribute>
+	</definition>
+
+	<!-- Master General Supplier List -->
+	<definition name="accounts.master.generalSupplier.list"
+		extends="accounts.master.base-definition">
+		<put-attribute name="title" value="General Supplier" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/master/generalSupplier-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/master/generalSupplier-list.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/generalSupplier-create.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- HS Code List -->
+	<definition name="accounts.master.hsCode.list"
+		extends="accounts.master.base-definition">
+		<put-attribute name="title" value="HS Code" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/master/hsCode-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/css/select2.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/master/hsCode-list.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/hsCode-create.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Master Shipping Terms List -->
+	<definition name="accounts.master.shippingTerms.list"
+		extends="accounts.master.base-definition">
+		<put-attribute name="title" value="Shipping Terms" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/master/shippingTerms-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/master/shippingTerms-list.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/shippingTerms-create.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Master Shipping Marks -->
+	<definition name="accounts.master.shippingMarks.list"
+		extends="accounts.master.base-definition">
+		<put-attribute name="title" value="Shipping Marks" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/master/shippingMarks-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/master/shippingMarks-list.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/shippingMarks-create.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<!-- Master Special Exchage Rates -->
+	<definition name="accounts.master.specialExchageRate.list"
+		extends="accounts.master.base-definition">
+		<put-attribute name="title" value="Special Exchage Rate" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/accounts/master/specialExchageRate-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/custom/js/accounts/master/specicalExchangeRate-create.js" />
+		</put-list-attribute>
+	</definition>
+</tiles-definitions>

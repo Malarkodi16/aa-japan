@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- Base Definition -->
+	<definition name="shipping.master.base-definition"
+		template="/WEB-INF/views/shipping/layout/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/layout/header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/shipping/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/layout/footer.jsp" />
+		<put-list-attribute name="stylesheets">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/css/dataTables.bootstrap.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts">
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/js/jquery.dataTables.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/DataTables-1.10.18/js/dataTables.bootstrap.min.js" />
+		</put-list-attribute>
+
+	</definition>
+	<!-- maker model Page -->
+	<definition name="shipping.master.maker/model.list"
+		extends="shipping.master.base-definition">
+		<put-attribute name="title"
+			value="Maker/Model Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/master/maker-model-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/css/select2.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/dataTables.buttons.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/jszip.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/datatable/excel/buttons.html5.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/maker-model.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/master/maker-model-list.js" />
+		</put-list-attribute>
+
+	</definition>
+
+	<!-- Create Maker Model -->
+	<definition name="shipping.master.maker"
+		extends="shipping.master.base-definition">
+		<put-attribute name="title" value="Maker Model" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/master/create-maker.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/css/select2.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/jquery.redirect-1.1.4/jquery.redirect.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/maker-model.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/master/create-maker.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Master Location Create -->
+	<definition name="shipping.master.location.create"
+		extends="shipping.master.base-definition">
+		<put-attribute name="title" value="Location Create" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/master/create-location.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/css/select2.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/custom/js/validation/location-validation.js" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/master/create-location.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Master Location List -->
+	<definition name="shipping.master.location.list"
+		extends="shipping.master.base-definition">
+		<put-attribute name="title" value="Location Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/master/locaton-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/css/select2.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/master/location-list.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Master port List -->
+	<definition name="shipping.master.port.list"
+		extends="shipping.master.base-definition">
+		<put-attribute name="title" value="Port Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/master/port-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/port-create-validation.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/master/port-list.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Master country port List -->
+	<definition name="shipping.master.countryPort.list"
+		extends="shipping.master.base-definition">
+		<put-attribute name="title" value="Country Port Map" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/master/country-port-map.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/port-create-validation.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/master/country-port-map.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Master forwarder List -->
+	<definition name="shipping.master.forwarder.list"
+		extends="shipping.master.base-definition">
+		<put-attribute name="title" value="Forwarder Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/master/forwarder-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/master/forwarder-list.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/forwarder-create.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Master Transporter List -->
+	<definition name="shipping.master.transporter.list"
+		extends="shipping.master.base-definition">
+		<put-attribute name="title"
+			value="Transporter Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/master/transporter-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/master/transporter-list.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Master Inspection Company List -->
+	<definition name="shipping.master.inspection.company.list"
+		extends="shipping.master.base-definition">
+		<put-attribute name="title"
+			value="Inspection Company Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/master/inspection-company-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/master/inspection-company-list.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Create Inspection Company -->
+	<definition name="shipping.master.inspection.company"
+		extends="shipping.master.base-definition">
+		<put-attribute name="title" value="Inspection Company" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/master/create-inspection-company.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/css/select2.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/jquery.redirect-1.1.4/jquery.redirect.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/inspection-company.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/master/create-inspection.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/jquery.inputmask.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<!-- Master Stock Model Type List -->
+	<definition name="shipping.master.stock.model.type.list"
+		extends="shipping.master.base-definition">
+		<put-attribute name="title"
+			value="Stock Model Type List" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/master/stock-model-type-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/master/stock-model-type-list.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<!-- Create Inspection Company -->
+	<definition name="shipping.master.stock.model.type.edit"
+		extends="shipping.master.base-definition">
+		<put-attribute name="title" value="Edit Stock Model" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/master/edit-stock-model.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/css/select2.min.css" />
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/css/select2.min.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/bower_components/select2/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/select2-4.0.5/dist/js/select2.full.min.js" />
+			<add-attribute
+				value="/resources/assets/plugins/jquery.redirect-1.1.4/jquery.redirect.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/autoNumeric.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/stock-model-type-validation.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/master/edit-stock-model.js" />
+			<add-attribute
+				value="/resources/assets/plugins/input-mask/jquery.inputmask.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Master Auction Grade Exterior List -->
+	<definition name="shipping.master.auctionGradeExterior.list"
+		extends="shipping.master.base-definition">
+		<put-attribute name="title"
+			value="Auction Grade Exterior Manage" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/master/auctionGradeExterior-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/master/auctionGradeExterior-list.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/auctionGradeExterior-create.js" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Master Auction Grade Interior List -->
+	<definition name="shipping.master.auctionGradeInterior.list"
+		extends="shipping.master.base-definition">
+		<put-attribute name="title"
+			value="Auction Grade Interior Manage" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/master/auctionGradeInterior-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/master/auctionGradeInterior-list.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/auctionGradeInterior-create.js" />
+		</put-list-attribute>
+	</definition>
+
+	
+	
+<!-- Shipping Company List -->
+	<definition name="shipping.master.shippingCompany.list"
+		extends="shipping.master.base-definition">
+		<put-attribute name="title" value="Shipping Company Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/master/shippingCompany-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/master/shippingCompany-list.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/shippingCompany-create.js" />
+		</put-list-attribute>
+	</definition>
+	
+	<!-- Ship List -->
+	<definition name="shipping.master.ship.list"
+		extends="shipping.master.base-definition">
+		<put-attribute name="title" value="Ship Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/shipping/master/ship-list.jsp" />
+		<put-list-attribute name="stylesheets"
+			inherit="true">
+		</put-list-attribute>
+		<put-list-attribute name="javascripts"
+			inherit="true">
+			<add-attribute
+				value="/resources/assets/custom/js/shipping/master/ship-list.js" />
+			<add-attribute
+				value="/resources/assets/custom/js/validation/ship-create.js" />
+		</put-list-attribute>
+	</definition>
+</tiles-definitions>
